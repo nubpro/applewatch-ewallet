@@ -120,7 +120,7 @@ const Home: NextPage = () => {
             2. Install the shortcut on your iPhone
           </div>
           <a
-            href="https://www.icloud.com/shortcuts/8497bcbedb4f4dd8b7f3b7732bc8c9d6"
+            href="https://www.icloud.com/shortcuts/2fd4d5e001bb46ff91c297c1559a704a"
             target="_blank"
             rel="noreferrer"
             className="bg-primary-400 mt-8 py-4 px-8 font-extrabold text-primary-900 rounded-2xl md:text-xl inline-block motion-safe:animate-bounce"
