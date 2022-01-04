@@ -10,16 +10,16 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>AWWALLET | Malaysia first e-wallet on the Apple Watch</title>
+        <title>awwallet | Malaysia first e-wallet on the Apple Watch</title>
       </Head>
 
       <div className="bg-primary-400">
         <div className="px-4 md:px-10">
           <div className="flex justify-between py-5 md:py-7">
             <div>
-              <div className="font-extrabold text-primary-900 md:text-xl">
+              <div className="font-extrabold text-secondary-400 md:text-xl">
                 <Link href="/">
-                  <a>AWWALLET</a>
+                  <a>awwallet</a>
                 </Link>
               </div>
             </div>
@@ -82,7 +82,10 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="py-6 text-center flex flex-col items-center">
-        <div className="font-extrabold text-xl py-4 md:text-2xl" id="howto">
+        <div
+          className="font-extrabold text-xl py-4 md:text-2xl text-secondary-400"
+          id="howto"
+        >
           WHAT YOU NEED
         </div>
         <div className="text-left">
@@ -103,7 +106,9 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="py-6 text-center px-4 md:px-10">
-        <div className="font-extrabold text-xl py-4 md:text-2xl">HOW-TO</div>
+        <div className="font-extrabold text-xl py-4 md:text-2xl text-secondary-400">
+          HOW-TO
+        </div>
 
         <div>
           <div className="font-semibold text-md md:text-xl">
@@ -113,6 +118,7 @@ const Home: NextPage = () => {
             <LiteYouTubeEmbed
               id="8CbVSXmF5PY"
               title="Setup Maybank e-Wallet on your Apple Watch!"
+              poster="maxresdefault"
             />
           </div>
         </div>
@@ -125,7 +131,7 @@ const Home: NextPage = () => {
             href="https://www.icloud.com/shortcuts/4ed4397fae5d48bca9a473fd6b3dd2a7"
             target="_blank"
             rel="noreferrer"
-            className="bg-primary-400 mt-8 py-4 px-8 font-extrabold text-primary-900 rounded-2xl md:text-xl inline-block motion-safe:animate-bounce"
+            className="bg-secondary-400 mt-8 py-4 px-8 font-extrabold text-white rounded-2xl md:text-xl inline-block motion-safe:animate-bounce"
           >
             <div className="flex items-center">
               <svg
@@ -140,7 +146,7 @@ const Home: NextPage = () => {
                   id="Path_1"
                   data-name="Path 1"
                   d="M47.031,88.184A41.152,41.152,0,1,0,5.879,47.031,41.152,41.152,0,0,0,47.031,88.184Zm0,5.879A47.031,47.031,0,1,0,0,47.031,47.031,47.031,0,0,0,47.031,94.063Z"
-                  fill="#381c01"
+                  fill="#fff"
                   fillRule="evenodd"
                 />
                 <path
@@ -148,7 +154,7 @@ const Home: NextPage = () => {
                   data-name="Path 2"
                   d="M10.987,17.736a2.939,2.939,0,0,1,4.162,0L30.7,33.3,46.261,17.736A2.943,2.943,0,1,1,50.423,21.9L32.786,39.535a2.939,2.939,0,0,1-4.162,0L10.987,21.9a2.939,2.939,0,0,1,0-4.162Z"
                   transform="translate(16.328 27.213)"
-                  fill="#381c01"
+                  fill="#fff"
                   fillRule="evenodd"
                 />
                 <path
@@ -156,7 +162,7 @@ const Home: NextPage = () => {
                   data-name="Path 3"
                   d="M19.814,10.125a2.939,2.939,0,0,1,2.939,2.939V42.459a2.939,2.939,0,0,1-5.879,0V13.064A2.939,2.939,0,0,1,19.814,10.125Z"
                   transform="translate(27.217 16.33)"
-                  fill="#381c01"
+                  fill="#fff"
                   fillRule="evenodd"
                 />
               </svg>

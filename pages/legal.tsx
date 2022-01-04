@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="bg-white w-full h-full z-10 fixed flex flex-col items-center pt-10 px-5">
         <div
-          className="font-extrabold text-xl py-4 md:text-2xl text-center"
+          className="font-extrabold text-xl py-4 md:text-2xl text-center text-secondary-400"
           id="howto"
         >
           {"Let's have a mutual understanding, shall we?"}
