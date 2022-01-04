@@ -51,9 +51,9 @@ const Home: NextPage = () => {
             Get Malaysia first e-Wallet on your wrist
           </div>
           <div className="font-semibold text-primary-850 md:text-2xl md:mt-2 md:space-y-1">
-            <p>100% Free. 100% Open. 99.79% Secure.</p>
-            <p>Supports Maybank2u App.</p>
-            <p>Works on the Apple Watch without an iPhone tethered.</p>
+            <p>100% Free. 100% Open.</p>
+            <p>Supports Maybank QRPay</p>
+            <p>Works on the Apple Watch without an iPhone tethered</p>
           </div>
         </div>
 
