@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import mockupPic from "../public/applewatch-mockup.png";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 const Home: NextPage = () => {
   return (
@@ -105,14 +107,12 @@ const Home: NextPage = () => {
           <div className="font-semibold text-md md:text-xl">
             1. Watch this video to learn how to setup it up
           </div>
-          <video
-            width="300"
-            className="m-auto mt-2 rounded-lg overflow-hidden"
-            controls
-            preload="metadata"
-          >
-            <source src="tutorial.mp4#t=0.1" />
-          </video>
+          <div className="md:w-2/4 m-auto mt-3">
+            <LiteYouTubeEmbed
+              id="8CbVSXmF5PY"
+              title="Setup Maybank e-Wallet on your Apple Watch!"
+            />
+          </div>
         </div>
 
         <div className="mt-8">
