@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>AWWALLET | Legal</title>
+        <title>awwallet | Legal</title>
       </Head>
       <div className="bg-white w-full h-full z-10 fixed flex flex-col items-center pt-10 px-5">
         <div
@@ -20,17 +20,18 @@ const Home: NextPage = () => {
         </div>
         <ul className="list-disc px-5 space-y-3 font-medium">
           <li>
-            AWWALLET is not affiliated with Maybank, Maybank2u and/or any
-            entities under Malayan Banking Berhad.
+            &quot;awwallet&quot; is not affiliated with Maybank, Maybank2u
+            and/or any entities under Malayan Banking Berhad.
           </li>
           <li>
-            We (AWWALLET) will not assume any legal responsibility in case any
-            mishaps happen to your bank accounts.
+            We (&quot;awwallet&quot;) will not assume any legal responsibility
+            in case any mishaps happen to your bank accounts.
           </li>
-          <li>Use AWWALLET at your own risk.</li>
+          <li>Use &quot;awwallet&quot; at your own risk.</li>
           <li>
-            AWWALLET do not and will not keep a copy of any credentials and/or
-            personal information related to your bank accounts.
+            &quot;awwallet&quot; do not and will not keep a copy of any
+            credentials and/or personal information related to your bank
+            accounts.
           </li>
         </ul>
 

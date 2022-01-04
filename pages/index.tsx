@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           <div className="font-extrabold text-xl uppercase text-primary-900 ml-0.5 md:text-4xl">
             Get Malaysia first e-Wallet on your wrist
           </div>
-          <div className="font-semibold text-primary-850 md:text-2xl">
+          <div className="font-semibold text-primary-850 md:text-2xl md:mt-2 md:space-y-1">
             <p>100% Free. 100% Open. 99.79% Secure.</p>
             <p>Supports Maybank2u App.</p>
             <p>Works on the Apple Watch without an iPhone tethered.</p>
@@ -86,8 +86,9 @@ const Home: NextPage = () => {
 
         <div className="px-4 md:px-6 py-5">
           <div className="text-[10px] font-normaltext-primary-850 text-center">
-            AWWALLET is not affiliated with Maybank, M2U and/or any entities
-            under Malayan Banking Berhad. We just like the colour yellow.
+            &quot;awwallet&quot; is not affiliated with Maybank, M2U and/or any
+            entities under Malayan Banking Berhad. We just like the colour
+            yellow.
           </div>
         </div>
       </div>
@@ -184,15 +185,11 @@ const Home: NextPage = () => {
         <div className="mt-8">
           <div className="font-semibold text-md md:text-xl">
             {
-              "3. If you need any help, our Discord channel is right here (oops I mean below)"
+              "3. Join our Discord channel (Apple Malaysia) to get help and updates!"
             }
           </div>
           <div className="font-medium py-2">
-            {
-              "This is also where you will receive the latest information about AWWALLET"
-            }
-            <br />
-            {"Please share your result with us, we love to see them!"}
+            {"Share your result with us, we love to see them!"}
             <br />
           </div>
 
