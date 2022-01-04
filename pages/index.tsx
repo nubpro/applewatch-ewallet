@@ -18,7 +18,9 @@ const Home: NextPage = () => {
           <div className="flex justify-between py-5 md:py-7">
             <div>
               <div className="font-extrabold text-primary-900 md:text-xl">
-                AWWALLET
+                <Link href="/">
+                  <a>AWWALLET</a>
+                </Link>
               </div>
             </div>
             <div className="flex items-center space-x-5 text-primary-900 font-semibold text-sm md:text-base">
