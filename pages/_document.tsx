@@ -45,9 +45,9 @@ class MyDocument extends Document {
             href="/favicon-16x16.png"
           />
           <link rel="manifest" href="/site.webmanifest" />
-          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffe419" />
-          <meta name="msapplication-TileColor" content="#da532c" />
-          <meta name="theme-color" content="#ffffff"></meta>
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#717171" />
+          <meta name="msapplication-TileColor" content="#FFE419" />
+          <meta name="theme-color" content="#ffffff" />
         </Head>
         <body>
           <Main />
