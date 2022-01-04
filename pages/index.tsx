@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import mockupPic from "../public/applewatch-mockup.png";
+import logoPic from "../public/logo.png";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
@@ -10,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>awwallet | Malaysia first e-wallet on the Apple Watch</title>
+        <title>awwallet | Malaysia First e-Wallet on the Apple Watch</title>
       </Head>
 
       <div className="bg-primary-400">
@@ -19,7 +20,16 @@ const Home: NextPage = () => {
             <div>
               <div className="font-extrabold text-secondary-400 md:text-xl">
                 <Link href="/">
-                  <a>awwallet</a>
+                  <a className="flex items-center">
+                    <div className="w-4 mr-2 md:w-6 md:mr-3">
+                      <Image
+                        src={logoPic}
+                        alt="awwallet's logo"
+                        layout="responsive"
+                      />
+                    </div>
+                    <div>awwallet</div>
+                  </a>
                 </Link>
               </div>
             </div>
