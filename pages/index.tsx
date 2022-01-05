@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             </div>
             <div className="flex items-center space-x-5 text-primary-900 font-semibold text-sm md:text-base">
               <a href="#howto">How-to</a>
-              <Link href="legal">
+              <Link href="/legal">
                 <a>Legal</a>
               </Link>
               <a
@@ -63,6 +63,8 @@ const Home: NextPage = () => {
               src={mockupPic}
               alt="apple watch mockup photo"
               layout="responsive"
+              priority={true}
+              placeholder="blur"
             />
           </div>
 
