@@ -48,6 +48,45 @@ class MyDocument extends Document {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#717171" />
           <meta name="msapplication-TileColor" content="#FFE419" />
           <meta name="theme-color" content="#ffffff" />
+
+          <meta
+            name="title"
+            content="awwallet - Malaysia First e-Wallet on the Apple Watch"
+          />
+          <meta
+            name="description"
+            content="Wants to pay with your watch but you can't? Fret not, you now can."
+          />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://awwallet.vercel.app" />
+          <meta
+            property="og:title"
+            content="awwallet - Malaysia First e-Wallet on the Apple Watch"
+          />
+          <meta
+            property="og:description"
+            content="Wants to pay with your watch but you can't? Fret not, you now can."
+          />
+          <meta
+            property="og:image"
+            content="https://awwallet.vercel.app/meta-preview.png"
+          />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://awwallet.vercel.app" />
+          <meta
+            property="twitter:title"
+            content="awwallet - Malaysia First e-Wallet on the Apple Watch"
+          />
+          <meta
+            property="twitter:description"
+            content="Wants to pay with your watch but you can't? Fret not, you now can."
+          />
+          <meta
+            property="twitter:image"
+            content="https://awwallet.vercel.app/meta-preview.png"
+          ></meta>
         </Head>
         <body>
           <Main />
