@@ -71,7 +71,6 @@ const Home: NextPage = () => {
               alt="apple watch mockup photo"
               layout="responsive"
               priority={true}
-              placeholder="blur"
             />
           </div>
 
