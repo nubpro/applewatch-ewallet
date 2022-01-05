@@ -54,10 +54,10 @@ const Home: NextPage = () => {
               </a>
             </div>
           </div>
-          <div className="font-extrabold text-xl uppercase text-primary-900 ml-0.5 md:text-4xl">
+          <div className="font-extrabold text-xl uppercase text-primary-900 ml-0.5 md:text-3xl">
             Get Malaysia first e-Wallet on your wrist
           </div>
-          <div className="font-semibold text-primary-850 md:text-2xl md:mt-2 md:space-y-1">
+          <div className="font-extrabold text-xl text-secondary-400 md:text-3xl md:mt-2 md:space-y-1">
             <p>100% Free. 100% Open.</p>
             <p>Supports Maybank QRPay</p>
             <p>Works on the Apple Watch without an iPhone tethered</p>
