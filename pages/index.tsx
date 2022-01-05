@@ -6,6 +6,7 @@ import mockupPic from "../public/applewatch-mockup.png";
 import logoPic from "../public/logo.png";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import * as gtag from "../lib/gtag";
 
 const Home: NextPage = () => {
   return (
@@ -42,6 +43,12 @@ const Home: NextPage = () => {
                 href="https://github.com/nubpro/applewatch-ewallet"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => {
+                  gtag.event({
+                    action: "open_github",
+                    category: "external_links",
+                  });
+                }}
               >
                 GitHub
               </a>
@@ -78,6 +85,12 @@ const Home: NextPage = () => {
                   className="rounded-md overflow-hidden "
                   controls
                   preload="metadata"
+                  onClick={() => {
+                    gtag.event({
+                      action: "play_demo",
+                      category: "video",
+                    });
+                  }}
                 >
                   <source src="/demo1.mp4#t=0.5" type="video/mp4" />
                 </video>
@@ -111,6 +124,12 @@ const Home: NextPage = () => {
               target="_blank"
               rel="noreferrer"
               className="border-dotted border-b-2 border-black"
+              onClick={() => {
+                gtag.event({
+                  action: "open_m2u_appstore",
+                  category: "external_links",
+                });
+              }}
             >
               Maybank2u MY
             </a>{" "}
@@ -132,6 +151,12 @@ const Home: NextPage = () => {
               id="8CbVSXmF5PY"
               title="Setup Maybank e-Wallet on your Apple Watch!"
               poster="maxresdefault"
+              onIframeAdded={() =>
+                gtag.event({
+                  action: "play_tutorial",
+                  category: "video",
+                })
+              }
             />
           </div>
         </div>
@@ -145,6 +170,12 @@ const Home: NextPage = () => {
             target="_blank"
             rel="noreferrer"
             className="bg-secondary-400 mt-8 py-4 px-8 font-extrabold text-white rounded-2xl md:text-xl inline-block motion-safe:animate-bounce"
+            onClick={() => {
+              gtag.event({
+                action: "download_maybank_shortcut",
+                category: "download",
+              });
+            }}
           >
             <div className="flex items-center">
               <svg
@@ -196,7 +227,15 @@ const Home: NextPage = () => {
           </div>
 
           <div className="mt-2">
-            <a href="https://discord.gg/5wn4SsWpUy">
+            <a
+              href="https://discord.gg/5wn4SsWpUy"
+              onClick={() => {
+                gtag.event({
+                  action: "open_myapple_discord",
+                  category: "social_media",
+                });
+              }}
+            >
               <Image
                 src="https://discordapp.com/api/guilds/783756405945401374/embed.png?style=banner3"
                 alt="Apple Malaysia Discord invite link"
@@ -213,6 +252,12 @@ const Home: NextPage = () => {
             href="https://www.instagram.com/chaiwkhai"
             target="_blank"
             rel="noreferrer"
+            onClick={() => {
+              gtag.event({
+                action: "open_cwk_instagram",
+                category: "social_media",
+              });
+            }}
           >
             <p>made by CWK</p>
             <p className="flex justify-center">
