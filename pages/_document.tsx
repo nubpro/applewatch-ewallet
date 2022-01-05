@@ -58,6 +58,7 @@ class MyDocument extends Document {
             content="Wants to pay with your watch but you can't? Fret not, you now can."
           />
 
+          {/*  Open Graph / Facebook  */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://awwallet.vercel.app" />
           <meta
@@ -73,6 +74,7 @@ class MyDocument extends Document {
             content="https://awwallet.vercel.app/meta-preview.png"
           />
 
+          {/*  Twitter  */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://awwallet.vercel.app" />
           <meta
