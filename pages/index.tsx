@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import mockupPic from "../public/applewatch-mockup.png";
 import logoPic from "../public/logo.png";
+import removeProxyman from "../public/remove-proxyman.png";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import * as gtag from "../lib/gtag";
@@ -216,16 +217,41 @@ const Home: NextPage = () => {
 
         <div className="mt-8">
           <div className="font-semibold text-md md:text-xl">
-            {
-              "3. Join our Discord channel (Apple Malaysia) to get help and updates!"
-            }
+            3. Before running the shortcut on your Apple Watch, please turn off
+            Proxyman or uninstall it
           </div>
-          <div className="font-medium py-2">
-            {"Share your result with us, we love to see them!"}
+          <div className="font-medium py-1">
+            {
+              "If you don't, you will get an invalid certification error on your watch"
+            }
             <br />
           </div>
 
-          <div className="mt-2">
+          <div className="mt-3">
+            <Image
+              src={removeProxyman}
+              alt="Uninstall Proxyman app from your iPhone"
+              width={300}
+              height={223}
+              className="rounded-xl mt-2"
+            />
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <div className="font-semibold text-md md:text-xl">
+            {
+              "4. Join our Discord channel (Apple Malaysia) to get help and updates!"
+            }
+          </div>
+          <div className="font-medium py-1">
+            {
+              "Share your result with us, we love to see them! Tag me on insta @chaiwkhai"
+            }
+            <br />
+          </div>
+
+          <div className="mt-3">
             <a
               href="https://discord.gg/5wn4SsWpUy"
               onClick={() => {
