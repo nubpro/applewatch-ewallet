@@ -14,6 +14,10 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>awwallet | Malaysia First e-Wallet on the Apple Watch</title>
+        <meta
+          name="google-site-verification"
+          content="1AZpUVyibVdjocfPK11efOFJXH-pqKXsr-D0DSGVqcc"
+        />
       </Head>
 
       <div className="bg-primary-400">
