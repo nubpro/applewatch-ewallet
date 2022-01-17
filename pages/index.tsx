@@ -9,6 +9,7 @@ import * as gtag from "../lib/gtag";
 import Menu from "../components/menu";
 import Footer from "../components/footer";
 import teaserPic from "../public/teaser-ewallets.png";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -162,7 +163,7 @@ const Home: NextPage = () => {
                 href="https://apps.apple.com/my/app/maybank2u-my/id1192180092"
                 target="_blank"
                 rel="noreferrer"
-                className="border-dotted border-b-2 border-black"
+                className="underline decoration-primary-400 underline-offset-2 decoration-4"
                 onClick={() => {
                   gtag.event({
                     action: "open_m2u_appstore",
@@ -255,6 +256,15 @@ const Home: NextPage = () => {
                   Get the download link from our Facebook Group
                 </div>
               </a>
+
+              <div className="mt-3 text-sm underline decoration-primary-400 underline-offset-2 decoration-4">
+                <Link href="/update">
+                  <a>
+                    🚨 If you want to update an existing shortcut, please refer
+                    to the update guide
+                  </a>
+                </Link>
+              </div>
             </div>
 
             <div>
