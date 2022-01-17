@@ -47,7 +47,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const clientVersion = Number(req.query?.v);
+  const clientVersion = Number(req.query.v) || 1.0;
   const minSupportedVersion = 1.1; // this version and above is supported
   const updateShortcut = minSupportedVersion > clientVersion;
 
