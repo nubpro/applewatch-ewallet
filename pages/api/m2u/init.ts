@@ -1,17 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 async function requestInit() {
-  const url =
-    "https://m2umobile.maybank2u.com.my/RMBPMY/apps/services/api/RMBP/iphone/init";
+  // Header params
+  const appVersion = "8.6";
+  const platformVersion = "6.0.0";
+  const userAgent = "M2U%20MY/1.0 CFNetwork/1312 Darwin/21.0.0";
+
   const headers = {
     Host: "m2umobile.maybank2u.com.my:443",
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "x-wl-app-version": "8.6",
-    "x-wl-platform-version": "6.0.0",
+    "x-wl-app-version": appVersion,
+    "x-wl-platform-version": platformVersion,
     "Accept-Language": "en-GB,en;q=0.9",
-    "User-Agent": "M2U%20MY/1.0 CFNetwork/1312 Darwin/21.0.0",
-    Cookie: "",
+    "User-Agent": userAgent,
+    Cookie: "", // clear cookie
   };
+
+  const url =
+    "https://m2umobile.maybank2u.com.my/RMBPMY/apps/services/api/RMBP/iphone/init";
 
   const res = await fetch(url, {
     method: "POST",
@@ -19,7 +25,7 @@ async function requestInit() {
   });
 
   const raw = await res.text();
-  const cleaned = await raw.replace("/*-secure-", "").replace("*/", "");
+  const cleaned = raw.replace("/*-secure-", "").replace("*/", "");
   const data = JSON.parse(cleaned);
 
   const cookies = res.headers.get("set-cookie")?.replace(/,/g, ";");
@@ -27,7 +33,14 @@ async function requestInit() {
   const deviceToken =
     data["challenges"]["wl_deviceNoProvisioningRealm"]["token"];
 
-  return { cookies, instanceId, deviceToken };
+  return {
+    cookies,
+    instanceId,
+    deviceToken,
+    appVersion,
+    platformVersion,
+    userAgent,
+  };
 }
 
 export default async function handler(
