@@ -7,7 +7,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import * as gtag from "../lib/gtag";
 import Menu from "../components/menu";
-import Link from "next/link";
+import Footer from "../components/footer";
 import teaserPic from "../public/teaser-ewallets.png";
 
 const Home: NextPage = () => {
@@ -102,10 +102,17 @@ const Home: NextPage = () => {
                 href="https://www.facebook.com/groups/347421593618481"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => {
+                  gtag.event({
+                    action: "open_community",
+                    category: "external_links",
+                    label: "teaser",
+                  });
+                }}
               >
                 <Image
                   src={teaserPic}
-                  alt="Uninstall Proxyman app from your iPhone"
+                  alt="Teaser upcoming supported e-wallets on awwallet"
                   className="rounded-xl mt-2"
                   layout={"responsive"}
                 />
@@ -126,8 +133,9 @@ const Home: NextPage = () => {
               className="bg-secondary-400 mt-3 py-4 px-8 font-extrabold text-white rounded-2xl inline-block"
               onClick={() => {
                 gtag.event({
-                  action: "download_maybank_shortcut",
-                  category: "download",
+                  action: "open_community",
+                  category: "external_links",
+                  label: "tell us in our fb group",
                 });
               }}
             >
@@ -207,6 +215,7 @@ const Home: NextPage = () => {
                   gtag.event({
                     action: "download_maybank_shortcut",
                     category: "download",
+                    label: "redirect to fb",
                   });
                 }}
               >
@@ -273,51 +282,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="pb-5 mt-10">
-        <div className="text-sm font-medium">
-          <a
-            href="https://www.instagram.com/chaiwkhai"
-            target="_blank"
-            rel="noreferrer"
-            onClick={() => {
-              gtag.event({
-                action: "open_cwk_instagram",
-                category: "social_media",
-              });
-            }}
-          >
-            <p className="flex justify-center">
-              <span className="underline decoration-primary-400 underline-offset-2 decoration-4 flex items-center">
-                awwallet by CWK | Follow him on Instagram
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="15"
-                  height="15"
-                  viewBox="0 0 30.002 30.001"
-                  className="inline-block ml-1"
-                >
-                  <path
-                    id="instagram"
-                    d="M18,3c-4.074,0-4.584.018-6.184.09a11.04,11.04,0,0,0-3.641.7A7.666,7.666,0,0,0,3.787,8.175a11.06,11.06,0,0,0-.7,3.641C3.017,13.416,3,13.926,3,18s.017,4.584.09,6.184a11.04,11.04,0,0,0,.7,3.641,7.664,7.664,0,0,0,4.388,4.388,11.06,11.06,0,0,0,3.641.7c1.6.072,2.111.09,6.184.09s4.584-.018,6.184-.09a11.04,11.04,0,0,0,3.641-.7,7.664,7.664,0,0,0,4.388-4.388,11.06,11.06,0,0,0,.7-3.641c.072-1.6.09-2.111.09-6.184s-.018-4.584-.09-6.184a11.04,11.04,0,0,0-.7-3.641,7.664,7.664,0,0,0-4.388-4.388,11.06,11.06,0,0,0-3.641-.7C22.584,3.018,22.074,3,18,3m0,2.7c4.005,0,4.479.015,6.06.087a8.334,8.334,0,0,1,2.787.516,4.966,4.966,0,0,1,2.847,2.847,8.324,8.324,0,0,1,.516,2.785c.072,1.583.087,2.055.087,6.062s-.015,4.479-.087,6.06a8.386,8.386,0,0,1-.516,2.787,4.966,4.966,0,0,1-2.847,2.847,8.324,8.324,0,0,1-2.785.516c-1.581.072-2.055.087-6.062.087s-4.481-.015-6.06-.087a8.386,8.386,0,0,1-2.787-.516,4.966,4.966,0,0,1-2.847-2.847,8.272,8.272,0,0,1-.516-2.785C5.718,22.479,5.7,22.007,5.7,18s.015-4.479.087-6.06a8.334,8.334,0,0,1,.516-2.787A4.966,4.966,0,0,1,9.153,6.306a8.272,8.272,0,0,1,2.785-.516C13.521,5.718,13.993,5.7,18,5.7M18,23a5,5,0,1,1,5-5,5,5,0,0,1-5,5m0-12.7A7.7,7.7,0,1,0,25.7,18,7.7,7.7,0,0,0,18,10.3m9.807-.3a1.8,1.8,0,1,1-1.8-1.8,1.8,1.8,0,0,1,1.8,1.8"
-                    transform="translate(-3 -3)"
-                    fillRule="evenodd"
-                  />
-                </svg>
-              </span>
-            </p>
-          </a>
-        </div>
-
-        <div className="mt-3 flex justify-center space-x-2 text-xs text-gray-700">
-          <div>
-            <Link href="/legal">
-              <a>Legal</a>
-            </Link>
-          </div>
-
-          <div>
-            <a href="https://github.com/nubpro/applewatch-ewallet">GitHub</a>
-          </div>
-        </div>
+        <Footer />
       </div>
     </>
   );
