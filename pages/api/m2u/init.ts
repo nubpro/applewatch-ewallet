@@ -55,7 +55,7 @@ export default async function handler(
     return res.status(403).json({
       updateShortcut,
       message:
-        "You're running an older awwallet which has outdated.\nTo continue using awwallet, please update to the latest version. https://awwallet.vercel.app/update",
+        "You're running an older awwallet which has outdated.\nTo continue using awwallet, please update to the latest version. Visit wwww.awwallet.vercel.app/update",
     });
   }
 

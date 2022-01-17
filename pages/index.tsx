@@ -1,13 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import mockupPic from "../public/applewatch-mockup.png";
-import logoPic from "../public/logo.png";
 import removeProxyman from "../public/remove-proxyman.png";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import * as gtag from "../lib/gtag";
+import Menu from "../components/menu";
+import Link from "next/link";
+import teaserPic from "../public/teaser-ewallets.png";
 
 const Home: NextPage = () => {
   return (
@@ -22,50 +23,24 @@ const Home: NextPage = () => {
 
       <div className="bg-primary-400">
         <div className="px-4 md:px-10">
-          <div className="flex justify-between py-5 md:py-7">
+          <Menu />
+
+          <div className="font-extrabold text-xl text-primary-900 ml-0.5 md:text-3xl leading-6">
+            Get Malaysia First e-Wallet on the Apple Watch
+          </div>
+
+          <div className="font-extrabold text-xl text-secondary-400 md:text-3xl mt-2 space-y-1 md:mt-4 md:space-y-3">
+            <div>{"It's free and open source."}</div>
+
             <div>
-              <div className="font-extrabold text-secondary-400 md:text-xl">
-                <Link href="/">
-                  <a className="flex items-center">
-                    <div className="w-4 mr-2 md:w-6 md:mr-3">
-                      <Image
-                        src={logoPic}
-                        alt="awwallet's logo"
-                        layout="responsive"
-                      />
-                    </div>
-                    <div>awwallet</div>
-                  </a>
-                </Link>
-              </div>
+              <div>Pay with just your watch.</div>
+              <div>Leave the phone.</div>
             </div>
-            <div className="flex items-center space-x-5 text-primary-900 font-semibold text-sm md:text-base">
-              <a href="#howto">How-to</a>
-              <Link href="/legal">
-                <a>Legal</a>
-              </Link>
-              <a
-                href="https://github.com/nubpro/applewatch-ewallet"
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => {
-                  gtag.event({
-                    action: "open_github",
-                    category: "external_links",
-                  });
-                }}
-              >
-                GitHub
-              </a>
+
+            <div>
+              <div>Supports Maybank QRPay</div>
+              <div className="text-sm">(Other e-wallets are coming!)</div>
             </div>
-          </div>
-          <div className="font-extrabold text-xl uppercase text-primary-900 ml-0.5 md:text-3xl">
-            Get Malaysia first e-Wallet on your wrist
-          </div>
-          <div className="font-extrabold text-xl text-secondary-400 md:text-3xl md:mt-2 md:space-y-1">
-            <p>100% Free. 100% Open.</p>
-            <p>Supports Maybank QRPay</p>
-            <p>Works on the Apple Watch without an iPhone tethered</p>
           </div>
         </div>
 
@@ -111,172 +86,194 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="py-6 text-center flex flex-col items-center">
-        <div
-          className="font-extrabold text-xl py-4 md:text-2xl text-secondary-400"
-          id="howto"
-        >
-          WHAT YOU NEED
-        </div>
-        <div className="text-left">
-          <p>✅ iPhone (iOS 13 and above)</p>
-          <p>✅ Apple Watch (watchOS 7 and above)</p>
-          <p>
-            ✅ Install{" "}
+
+      <div className="space-y-12 mt-5 md:mt-10 px-4 md:px-10">
+        <div className="text-center flex flex-col items-center">
+          <div
+            className="font-extrabold text-xl py-4 md:text-2xl text-secondary-400"
+            id="install"
+          >
+            {"What's Coming? 👀"}
+          </div>
+
+          <div>
+            <div className="m-auto md:max-w-2xl">
+              <a
+                href="https://www.facebook.com/groups/347421593618481"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={teaserPic}
+                  alt="Uninstall Proxyman app from your iPhone"
+                  className="rounded-xl mt-2"
+                  layout={"responsive"}
+                />
+              </a>
+            </div>
+
+            <div className="mt-4 font-semibold text-md md:text-lg">
+              e-Wallet providers such as Grab, Touch n Go, Boost may be coming
+              to awwallet
+              <br />
+              Tell us which want you would like to see first!
+            </div>
+
             <a
-              href="https://apps.apple.com/my/app/maybank2u-my/id1192180092"
+              href="https://www.facebook.com/groups/347421593618481"
               target="_blank"
               rel="noreferrer"
-              className="border-dotted border-b-2 border-black"
+              className="bg-secondary-400 mt-3 py-4 px-8 font-extrabold text-white rounded-2xl inline-block"
               onClick={() => {
                 gtag.event({
-                  action: "open_m2u_appstore",
-                  category: "external_links",
+                  action: "download_maybank_shortcut",
+                  category: "download",
                 });
               }}
             >
-              Maybank2u MY
-            </a>{" "}
-            app on your iPhone
-          </p>
-        </div>
-      </div>
-      <div className="py-6 text-center px-4 md:px-10">
-        <div className="font-extrabold text-xl py-4 md:text-2xl text-secondary-400">
-          HOW-TO
-        </div>
-
-        <div>
-          <div className="font-semibold text-md md:text-xl">
-            1. Watch this video to learn how to setup it up
-          </div>
-          <div className="md:w-2/4 m-auto mt-3">
-            <LiteYouTubeEmbed
-              id="8CbVSXmF5PY"
-              title="Setup Maybank e-Wallet on your Apple Watch!"
-              poster="maxresdefault"
-              onIframeAdded={() =>
-                gtag.event({
-                  action: "play_tutorial",
-                  category: "video",
-                })
-              }
-            />
-          </div>
-        </div>
-
-        <div className="mt-8">
-          <div className="font-semibold text-md md:text-xl">
-            2. Install the shortcut on your iPhone
-          </div>
-          <a
-            href="https://www.icloud.com/shortcuts/4ed4397fae5d48bca9a473fd6b3dd2a7"
-            target="_blank"
-            rel="noreferrer"
-            className="bg-secondary-400 mt-8 py-4 px-8 font-extrabold text-white rounded-2xl md:text-xl inline-block motion-safe:animate-bounce"
-            onClick={() => {
-              gtag.event({
-                action: "download_maybank_shortcut",
-                category: "download",
-              });
-            }}
-          >
-            <div className="flex items-center">
-              <svg
-                id="arrow-down-circle"
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 94.063 94.063"
-                className="mr-2"
-              >
-                <path
-                  id="Path_1"
-                  data-name="Path 1"
-                  d="M47.031,88.184A41.152,41.152,0,1,0,5.879,47.031,41.152,41.152,0,0,0,47.031,88.184Zm0,5.879A47.031,47.031,0,1,0,0,47.031,47.031,47.031,0,0,0,47.031,94.063Z"
-                  fill="#fff"
-                  fillRule="evenodd"
-                />
-                <path
-                  id="Path_2"
-                  data-name="Path 2"
-                  d="M10.987,17.736a2.939,2.939,0,0,1,4.162,0L30.7,33.3,46.261,17.736A2.943,2.943,0,1,1,50.423,21.9L32.786,39.535a2.939,2.939,0,0,1-4.162,0L10.987,21.9a2.939,2.939,0,0,1,0-4.162Z"
-                  transform="translate(16.328 27.213)"
-                  fill="#fff"
-                  fillRule="evenodd"
-                />
-                <path
-                  id="Path_3"
-                  data-name="Path 3"
-                  d="M19.814,10.125a2.939,2.939,0,0,1,2.939,2.939V42.459a2.939,2.939,0,0,1-5.879,0V13.064A2.939,2.939,0,0,1,19.814,10.125Z"
-                  transform="translate(27.217 16.33)"
-                  fill="#fff"
-                  fillRule="evenodd"
-                />
-              </svg>
-              {'Download "Pay with Maybank" shortcut'}
-            </div>
-          </a>
-        </div>
-
-        <div className="mt-8">
-          <div className="font-semibold text-md md:text-xl">
-            3. Before running the shortcut on your Apple Watch, please turn off
-            Proxyman or uninstall it
-          </div>
-          <div className="font-medium py-1">
-            {
-              "If you don't, you will get an invalid certification error on your watch"
-            }
-            <br />
-          </div>
-
-          <div className="mt-3">
-            <Image
-              src={removeProxyman}
-              alt="Uninstall Proxyman app from your iPhone"
-              width={300}
-              height={223}
-              className="rounded-xl mt-2"
-            />
-          </div>
-        </div>
-
-        <div className="mt-8">
-          <div className="font-semibold text-md md:text-xl">
-            {
-              "4. Join our Discord channel (Apple Malaysia) to get help and updates!"
-            }
-          </div>
-          <div className="font-medium py-1">
-            {
-              "Share your result with us, we love to see them! Tag me on insta @chaiwkhai"
-            }
-            <br />
-          </div>
-
-          <div className="mt-3">
-            <a
-              href="https://discord.gg/5wn4SsWpUy"
-              onClick={() => {
-                gtag.event({
-                  action: "open_myapple_discord",
-                  category: "social_media",
-                });
-              }}
-            >
-              <Image
-                src="https://discordapp.com/api/guilds/783756405945401374/embed.png?style=banner3"
-                alt="Apple Malaysia Discord invite link"
-                width={320}
-                height={140}
-                className="rounded-xl"
-              />
+              <div className="flex items-center">
+                ✋ Tell us in our Facebook Group
+              </div>
             </a>
           </div>
         </div>
 
-        <div className="text-sm mt-6 py-4 font-medium">
+        <div className="text-center flex flex-col items-center">
+          <div
+            className="font-extrabold text-xl py-4 md:text-2xl text-secondary-400"
+            id="install"
+          >
+            What You Need
+          </div>
+          <div className="text-left">
+            <p>✅ iPhone (iOS 13 and above)</p>
+            <p>✅ Apple Watch (watchOS 7 and above)</p>
+            <p>
+              ✅ Install{" "}
+              <a
+                href="https://apps.apple.com/my/app/maybank2u-my/id1192180092"
+                target="_blank"
+                rel="noreferrer"
+                className="border-dotted border-b-2 border-black"
+                onClick={() => {
+                  gtag.event({
+                    action: "open_m2u_appstore",
+                    category: "external_links",
+                  });
+                }}
+              >
+                Maybank2u MY
+              </a>{" "}
+              app on your iPhone
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <div className="font-extrabold text-xl py-4 md:text-2xl text-secondary-400">
+            Installation Steps
+          </div>
+
+          <div className="space-y-10">
+            <div>
+              <div className="font-semibold text-md md:text-lg">
+                1. Watch this video to learn how to setup it up
+              </div>
+              <div className="md:w-2/4 m-auto mt-3">
+                <LiteYouTubeEmbed
+                  id="8CbVSXmF5PY"
+                  title="Setup Maybank e-Wallet on your Apple Watch!"
+                  poster="maxresdefault"
+                  onIframeAdded={() =>
+                    gtag.event({
+                      action: "play_tutorial",
+                      category: "video",
+                    })
+                  }
+                />
+              </div>
+            </div>
+
+            <div>
+              <div className="font-semibold text-md md:text-lg">
+                {'2. Install "Pay with Maybank" shortcut on your iPhone'}
+              </div>
+              <a
+                href="https://www.facebook.com/groups/347421593618481"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-secondary-400 mt-3 py-4 px-8 font-extrabold text-white rounded-2xl inline-block"
+                onClick={() => {
+                  gtag.event({
+                    action: "download_maybank_shortcut",
+                    category: "download",
+                  });
+                }}
+              >
+                <div className="flex items-center">
+                  <svg
+                    id="arrow-down-circle"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 94.063 94.063"
+                    className="mr-2"
+                  >
+                    <path
+                      id="Path_1"
+                      data-name="Path 1"
+                      d="M47.031,88.184A41.152,41.152,0,1,0,5.879,47.031,41.152,41.152,0,0,0,47.031,88.184Zm0,5.879A47.031,47.031,0,1,0,0,47.031,47.031,47.031,0,0,0,47.031,94.063Z"
+                      fill="#fff"
+                      fillRule="evenodd"
+                    />
+                    <path
+                      id="Path_2"
+                      data-name="Path 2"
+                      d="M10.987,17.736a2.939,2.939,0,0,1,4.162,0L30.7,33.3,46.261,17.736A2.943,2.943,0,1,1,50.423,21.9L32.786,39.535a2.939,2.939,0,0,1-4.162,0L10.987,21.9a2.939,2.939,0,0,1,0-4.162Z"
+                      transform="translate(16.328 27.213)"
+                      fill="#fff"
+                      fillRule="evenodd"
+                    />
+                    <path
+                      id="Path_3"
+                      data-name="Path 3"
+                      d="M19.814,10.125a2.939,2.939,0,0,1,2.939,2.939V42.459a2.939,2.939,0,0,1-5.879,0V13.064A2.939,2.939,0,0,1,19.814,10.125Z"
+                      transform="translate(27.217 16.33)"
+                      fill="#fff"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                  Get the download link from our Facebook Group
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <div className="font-semibold text-md md:text-lg">
+                3. Turn off Proxyman or uninstall it before runnning the
+                shortcut on your watch
+              </div>
+              <div className="font-medium py-1">
+                {"If you don't, you will get an invalid certification error"}
+                <br />
+              </div>
+
+              <div className="mt-3">
+                <Image
+                  src={removeProxyman}
+                  alt="Uninstall Proxyman app from your iPhone"
+                  width={300}
+                  height={223}
+                  className="rounded-xl mt-2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="pb-5 mt-10">
+        <div className="text-sm font-medium">
           <a
             href="https://www.instagram.com/chaiwkhai"
             target="_blank"
@@ -288,16 +285,15 @@ const Home: NextPage = () => {
               });
             }}
           >
-            <p>made by CWK</p>
             <p className="flex justify-center">
-              <span className="border-dotted border-b-2 border-black flex items-center">
-                Follow his Instagram
+              <span className="underline decoration-primary-400 underline-offset-2 decoration-4 flex items-center">
+                awwallet by CWK | Follow him on Instagram
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="15"
                   height="15"
                   viewBox="0 0 30.002 30.001"
-                  className="inline-block ml-0.5"
+                  className="inline-block ml-1"
                 >
                   <path
                     id="instagram"
@@ -309,6 +305,18 @@ const Home: NextPage = () => {
               </span>
             </p>
           </a>
+        </div>
+
+        <div className="mt-3 flex justify-center space-x-2 text-xs text-gray-700">
+          <div>
+            <Link href="/legal">
+              <a>Legal</a>
+            </Link>
+          </div>
+
+          <div>
+            <a href="https://github.com/nubpro/applewatch-ewallet">GitHub</a>
+          </div>
         </div>
       </div>
     </>
