@@ -47,7 +47,18 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const init_result = await requestInit();
+  const clientVersion = Number(req.query?.v);
+  const minSupportedVersion = 1.1; // this version and above is supported
+  const updateShortcut = minSupportedVersion > clientVersion;
 
-  res.status(200).json(init_result);
+  if (updateShortcut === true) {
+    return res.status(403).json({
+      updateShortcut,
+      message:
+        "This awwallet shortcut is now outdated. Please install the latest shortcut from https://awwallet.vercel.app",
+    });
+  }
+
+  const init_result = await requestInit();
+  return res.status(200).json(init_result);
 }
