@@ -163,7 +163,7 @@ const Home: NextPage = () => {
                 href="https://apps.apple.com/my/app/maybank2u-my/id1192180092"
                 target="_blank"
                 rel="noreferrer"
-                className="underline decoration-primary-400 underline-offset-2 decoration-4"
+                className="underline decoration-primary-400 underline-offset-4 decoration-4"
                 onClick={() => {
                   gtag.event({
                     action: "open_m2u_appstore",
@@ -257,9 +257,9 @@ const Home: NextPage = () => {
                 </div>
               </a>
 
-              <div className="mt-3 text-sm underline decoration-primary-400 underline-offset-2 decoration-4">
+              <div className="mt-3">
                 <Link href="/update">
-                  <a>
+                  <a className="text-sm underline decoration-primary-400 underline-offset-4 decoration-4">
                     🚨 If you want to update an existing shortcut, please refer
                     to the update guide
                   </a>

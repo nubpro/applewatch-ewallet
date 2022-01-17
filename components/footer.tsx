@@ -17,7 +17,7 @@ const Footer = () => {
           }}
         >
           <p className="flex justify-center">
-            <span className="underline decoration-primary-400 underline-offset-2 decoration-4 flex items-center">
+            <span className="underline decoration-primary-400 underline-offset-4 decoration-4 flex items-center">
               awwallet by CWK | Follow him on Instagram
               <svg
                 xmlns="http://www.w3.org/2000/svg"
