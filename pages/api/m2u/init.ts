@@ -6,7 +6,7 @@ async function requestInit() {
   const headers = {
     Host: "m2umobile.maybank2u.com.my:443",
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "x-wl-app-version": "8.5",
+    "x-wl-app-version": "8.6",
     "x-wl-platform-version": "6.0.0",
     "Accept-Language": "en-GB,en;q=0.9",
     "User-Agent": "M2U%20MY/1.0 CFNetwork/1312 Darwin/21.0.0",
