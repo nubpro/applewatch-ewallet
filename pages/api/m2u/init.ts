@@ -48,14 +48,14 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const clientVersion = Number(req.query.v) || 1.0;
-  const minSupportedVersion = 1.1; // this version and above is supported
+  const minSupportedVersion = 1.1; // this version and above is supporte
   const updateShortcut = minSupportedVersion > clientVersion;
 
   if (updateShortcut === true) {
     return res.status(403).json({
       updateShortcut,
       message:
-        "This awwallet shortcut is now outdated. Please install the latest shortcut from https://awwallet.vercel.app",
+        "This awwallet shortcut is outdated.\nPlease install the latest shortcut from https://awwallet.vercel.app",
     });
   }
 
