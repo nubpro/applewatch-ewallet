@@ -204,7 +204,7 @@ const Home: NextPage = () => {
             </div>
 
             <div>
-              <div className="font-semibold text-md md:text-lg">
+              <div className="font-semibold text-md md:text-lg" id="download">
                 {'2. Install "Pay with Maybank" shortcut on your iPhone'}
               </div>
               <a

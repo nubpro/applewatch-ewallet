@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import viewShortcutPic from "../public/view-shortcut.png";
 import Image from "next/image";
 import getMaybankTokenPic from "../public/get-maybank-token.png";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -79,9 +80,14 @@ const Home: NextPage = () => {
 
             <div>
               <div className="font-semibold">
-                5. Install the latest shortcut. During the setup process, it
-                will ask for Maybank secret token.
+                5.{" "}
+                <Link href="/#download">
+                  <a className="underline decoration-primary-400 underline-offset-2 decoration-2">
+                    Install the latest shortcut.
+                  </a>
+                </Link>
                 <br />
+                During the setup process, it will ask for Maybank secret token.
                 Paste what you copied previously.
               </div>
             </div>
