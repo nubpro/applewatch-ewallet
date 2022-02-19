@@ -58,12 +58,16 @@ const Home: NextPage = () => {
           <div className="md:flex-1 px-4">
             <div className="md:w-4/6 m-auto">
               <div className="text-sm font-medium italic text-center mb-1">
-                Play the demo
+                Watch the demo
               </div>
               <div className="bg-white p-6 rounded-2xl shadow-lg">
                 <video
                   className="rounded-md overflow-hidden "
-                  controls
+                  controls={false}
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
                   preload="metadata"
                   onClick={() => {
                     gtag.event({
