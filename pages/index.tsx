@@ -10,8 +10,74 @@ import Menu from "../components/menu";
 import Footer from "../components/footer";
 import teaserPic from "../public/teaser-ewallets.png";
 import Link from "next/link";
+import BasicLayout from "../layout/basic";
 
 const Home: NextPage = () => {
+  return (
+    <>
+      <Head>
+        <title>awwallet | Malaysia First e-Wallet on the Apple Watch</title>
+        <meta
+          name="google-site-verification"
+          content="1AZpUVyibVdjocfPK11efOFJXH-pqKXsr-D0DSGVqcc"
+        />
+      </Head>
+
+      <BasicLayout>
+        <div className="flex flex-col md:flex-row">
+          <div className="relative bg-slate-400 overflow-hidden h-[500px] md:w-96">
+            {/* Sample placeholde image */}
+            {/* <Image
+              src={removeProxyman}
+              alt="TBA"
+              layout="fill"
+              className="object-cover"
+            /> */}
+
+            <video
+              className="w-full h-full object-cover"
+              controls={false}
+              autoPlay
+              loop
+              playsInline
+              muted
+              preload="metadata"
+            >
+              <source src="/demo1.mp4#t=0.5" type="video/mp4" />
+            </video>
+
+            <div className="absolute bottom-0 px-5 mb-4">
+              <div className="font-extrabold uppercase text-xs text-primary-400 drop-shadow">
+                {"What's New"}
+              </div>
+              <div className="text-white font-bold text-xl [text-shadow:0_2px_0_#661FFC]">
+                Pay with GrabPay
+                <br />
+                on your Apple Watch
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 px-5 py-10 md:px-10 md:py-12">
+            <div className="md:text-2xl">
+              <div className="font-bold">Pay at your favourite restaurant</div>
+              <div className="font-extrabold">
+                Cash-free. Phone-free. For free.
+              </div>
+              <div className="font-semibold">
+                Uh. The App. No, not the bill...
+              </div>
+            </div>
+
+            <div className="mt-10">
+              <div>Access your favourite eWallets on your Apple Watch</div>
+              <div>{/* TODO: eWallets image */}</div>
+            </div>
+          </div>
+        </div>
+      </BasicLayout>
+    </>
+  );
+
   return (
     <>
       <Head>
