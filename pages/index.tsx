@@ -15,6 +15,7 @@ import GrabPayImage from "../public/ewallets/grabpay.png";
 import MAEImage from "../public/ewallets/mae.png";
 import BoostImage from "../public/ewallets/boost.png";
 import ShopeePayImage from "../public/ewallets/shopeepay.png";
+import M2UImage from "../public/ewallets/m2u.png";
 
 const Home: NextPage = () => {
   return (
@@ -28,7 +29,7 @@ const Home: NextPage = () => {
       </Head>
 
       <BasicLayout>
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row md:h-[500px]">
           <div className="relative bg-slate-400 overflow-hidden h-[500px] md:w-96">
             {/* Sample placeholde image */}
             {/* <Image
@@ -76,29 +77,43 @@ const Home: NextPage = () => {
             <div className="mt-10">
               <div>Access your favourite eWallets on your Apple Watch</div>
               <div className="space-x-4 mt-6 flex md:space-x-6">
-                <div>
+                <div className="flex flex-col justify-center items-center">
                   <Image
                     src={GrabPayImage}
                     alt="GrabPay"
-                    width={83}
-                    height={70}
+                    width={77}
+                    height={65}
                   />
                 </div>
-                <div>
-                  <Image src={BoostImage} alt="Boost" width={221} height={70} />
+
+                <div className="flex flex-col justify-center items-center">
+                  <Image src={M2UImage} alt="M2U" width={200} height={33} />
+                </div>
+                <br />
+                <div className="flex flex-col justify-center items-center">
+                  <Image src={BoostImage} alt="Boost" width={158} height={50} />
+                  <div className="text-xs italic mt-1 text-center">
+                    coming soon
+                  </div>
                 </div>
 
-                <div>
-                  <Image src={MAEImage} alt="MAE" width={139} height={70} />
+                <div className="flex flex-col justify-center items-center">
+                  <Image src={MAEImage} alt="MAE" width={119} height={60} />
+                  <div className="text-xs italic mt-1 text-center">
+                    coming soon
+                  </div>
                 </div>
 
-                <div>
+                <div className="flex flex-col justify-center items-center">
                   <Image
                     src={ShopeePayImage}
                     alt="ShopeePay"
-                    width={365}
-                    height={70}
+                    width={261}
+                    height={50}
                   />
+                  <div className="text-xs italic mt-1 text-center">
+                    coming soon
+                  </div>
                 </div>
               </div>
             </div>
@@ -114,7 +129,7 @@ const Home: NextPage = () => {
             <div className="flex flex-col w-10/12 m-auto space-y-3 justify-center drop-shadow-lg sm:flex-row sm:space-y-0 sm:items-center">
               <a
                 href="#"
-                className="group h-80 sm:w-64 bg-white rounded-2xl overflow-hidden flex flex-col sm:rounded-none sm:rounded-l-2xl"
+                className="group h-80 sm:w-64 bg-white hover:bg-gray-100 rounded-2xl overflow-hidden flex flex-col sm:rounded-none sm:rounded-l-2xl"
               >
                 <div className="text-center py-3">
                   <div className="relative h-14 mt-2 mb-1">
@@ -144,7 +159,7 @@ const Home: NextPage = () => {
 
               <a
                 href="#"
-                className="group h-[23em] sm:w-72 bg-secondary-500 rounded-2xl flex flex-col drop-shadow-md overflow-hidden"
+                className="group h-[23em] sm:w-72 bg-secondary-500 hover:bg-secondary-700 rounded-2xl flex flex-col drop-shadow-md overflow-hidden"
               >
                 <div className="text-center py-3">
                   <div className="relative h-14 mt-2 mb-1">
@@ -173,7 +188,7 @@ const Home: NextPage = () => {
                   <div>Phone-free</div>
                 </div>
 
-                <div className="bg-secondary-700 group-hover:bg-secondary-900 text-center py-3.5 font-semibold text-primary-400 flex flex-row justify-between px-4">
+                <div className="bg-secondary-500 border-t border-secondary-700 group-hover:bg-secondary-700 group-hover:border-secondary-900 text-center py-3.5 font-semibold text-primary-400 flex flex-row justify-between px-4">
                   <div>Try for free</div>
                   <div>RM0.00/mon</div>
                 </div>
@@ -183,15 +198,16 @@ const Home: NextPage = () => {
             <div className="flex flex-col w-10/12 m-auto space-y-3 justify-center drop-shadow-lg sm:flex-row sm:space-y-0 sm:items-center">
               <a
                 href="#"
-                className="group h-80 sm:w-64 bg-white rounded-2xl overflow-hidden flex flex-col"
+                className="group h-80 sm:w-64 bg-white hover:bg-gray-100 rounded-2xl overflow-hidden flex flex-col"
               >
-                <div className="text-center py-3">
-                  <div className="relative h-14 mt-2 mb-1">
+                <div className="text-center mt-8 mb-3">
+                  <div className="mb-1 flex justify-center">
                     <Image
-                      src={GrabPayImage}
-                      layout={"fill"}
-                      alt="GrabPay"
-                      className="object-contain"
+                      src={M2UImage}
+                      alt="M2U"
+                      width={150}
+                      height={25}
+                      className="p-0"
                     />
                   </div>
                   <div className="text-xs uppercase font-extrabold tracking-wide">
@@ -200,6 +216,7 @@ const Home: NextPage = () => {
                 </div>
 
                 <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
+                  <div>Less merchant availability</div>
                   <div>Show QR code only</div>
                   <div>Phone-free</div>
                 </div>
