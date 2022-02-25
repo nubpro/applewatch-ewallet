@@ -11,6 +11,10 @@ import Footer from "../components/footer";
 import teaserPic from "../public/teaser-ewallets.png";
 import Link from "next/link";
 import BasicLayout from "../layout/basic";
+import GrabPayImage from "../public/ewallets/grabpay.png";
+import MAEImage from "../public/ewallets/mae.png";
+import BoostImage from "../public/ewallets/boost.png";
+import ShopeePayImage from "../public/ewallets/shopeepay.png";
 
 const Home: NextPage = () => {
   return (
@@ -46,7 +50,7 @@ const Home: NextPage = () => {
               <source src="/demo1.mp4#t=0.5" type="video/mp4" />
             </video>
 
-            <div className="absolute bottom-0 px-5 mb-4">
+            <div className="absolute bottom-0 px-5 pb-4 pt-4 w-full bg-gradient-to-t from-secondary-400">
               <div className="font-extrabold uppercase text-xs text-primary-400 drop-shadow">
                 {"What's New"}
               </div>
@@ -57,6 +61,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
+
           <div className="flex-1 px-5 py-10 md:px-10 md:py-12">
             <div className="md:text-2xl">
               <div className="font-bold">Pay at your favourite restaurant</div>
@@ -70,7 +75,139 @@ const Home: NextPage = () => {
 
             <div className="mt-10">
               <div>Access your favourite eWallets on your Apple Watch</div>
-              <div>{/* TODO: eWallets image */}</div>
+              <div className="space-x-4 mt-6 flex md:space-x-6">
+                <div>
+                  <Image
+                    src={GrabPayImage}
+                    alt="GrabPay"
+                    width={83}
+                    height={70}
+                  />
+                </div>
+                <div>
+                  <Image src={BoostImage} alt="Boost" width={221} height={70} />
+                </div>
+
+                <div>
+                  <Image src={MAEImage} alt="MAE" width={139} height={70} />
+                </div>
+
+                <div>
+                  <Image
+                    src={ShopeePayImage}
+                    alt="ShopeePay"
+                    width={365}
+                    height={70}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gray-50 py-10 px-3">
+          <div className="mt-2 mb-10 md:text-xl font-bold text-center text-secondary-400 [text-shadow:0_2px_0_#FFE419]">
+            We currently support the following eWallets
+          </div>
+
+          <div className="space-y-14">
+            <div className="flex flex-col w-10/12 m-auto space-y-3 justify-center drop-shadow-lg sm:flex-row sm:space-y-0 sm:items-center">
+              <a
+                href="#"
+                className="group h-80 sm:w-64 bg-white rounded-2xl overflow-hidden flex flex-col sm:rounded-none sm:rounded-l-2xl"
+              >
+                <div className="text-center py-3">
+                  <div className="relative h-14 mt-2 mb-1">
+                    <Image
+                      src={GrabPayImage}
+                      layout={"fill"}
+                      alt="GrabPay"
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-xs uppercase font-extrabold tracking-wide">
+                    Free Version
+                  </div>
+                </div>
+
+                <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
+                  <div>High merchant availability</div>
+                  <div>Show QR code only</div>
+                  <div>Collect GrabReward points</div>
+                  <div>Phone-free</div>
+                </div>
+
+                <div className="border-t text-center py-3.5 font-bold text-secondary-400 group-hover:bg-gray-100">
+                  Get started for FREE
+                </div>
+              </a>
+
+              <a
+                href="#"
+                className="group h-[23em] sm:w-72 bg-secondary-500 rounded-2xl flex flex-col drop-shadow-md overflow-hidden"
+              >
+                <div className="text-center py-3">
+                  <div className="relative h-14 mt-2 mb-1">
+                    <Image
+                      src={GrabPayImage}
+                      layout={"fill"}
+                      alt="GrabPay"
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-xs uppercase font-extrabold tracking-wide text-primary-400">
+                    Pro Version
+                  </div>
+                </div>
+
+                <div className="text-sm mb-auto space-y-1 px-6 text-white">
+                  <div>SUPER HIGH merchant availability</div>
+                  <div className="font-semibold">💸 Show wallet balance 💸</div>
+                  <div className="font-semibold">🎨🖌 Colour your QR code!</div>
+                  <div>
+                    Show QR code and{" "}
+                    <span className="font-semibold">✨ barcode ✨</span>
+                  </div>
+
+                  <div>Collect GrabReward points</div>
+                  <div>Phone-free</div>
+                </div>
+
+                <div className="bg-secondary-700 group-hover:bg-secondary-900 text-center py-3.5 font-semibold text-primary-400 flex flex-row justify-between px-4">
+                  <div>Try for free</div>
+                  <div>RM0.00/mon</div>
+                </div>
+              </a>
+            </div>
+
+            <div className="flex flex-col w-10/12 m-auto space-y-3 justify-center drop-shadow-lg sm:flex-row sm:space-y-0 sm:items-center">
+              <a
+                href="#"
+                className="group h-80 sm:w-64 bg-white rounded-2xl overflow-hidden flex flex-col"
+              >
+                <div className="text-center py-3">
+                  <div className="relative h-14 mt-2 mb-1">
+                    <Image
+                      src={GrabPayImage}
+                      layout={"fill"}
+                      alt="GrabPay"
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-xs uppercase font-extrabold tracking-wide">
+                    Free Version
+                  </div>
+                </div>
+
+                <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
+                  <div>Show QR code only</div>
+                  <div>Phone-free</div>
+                </div>
+
+                <div className="border-t text-center py-3.5 font-bold text-secondary-400 group-hover:bg-gray-100">
+                  Get started for FREE
+                </div>
+              </a>
             </div>
           </div>
         </div>

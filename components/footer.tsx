@@ -7,7 +7,18 @@ const Footer = (props: any) => {
       <div className="text-sm flex flex-col md:flex-row md:justify-between">
         <div>
           <div>
-            <a href="#" className="font-bold text-primary-900">
+            <a
+              href="https://www.instagram.com/chaiwkhai"
+              target="_blank"
+              rel="noreferrer"
+              className="font-bold text-primary-900 hover:underline"
+              onClick={() => {
+                gtag.event({
+                  action: "open_cwk_instagram",
+                  category: "social_media",
+                });
+              }}
+            >
               Made by CWK | Follow him on Instagram
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -27,14 +38,42 @@ const Footer = (props: any) => {
           </div>
 
           <div className="mt-1 text-color-900 text-xs">
-            <div className="hover:underline">
-              <a href="@">Join our community</a>
+            <div>
+              <a
+                href="https://www.facebook.com/groups/347421593618481"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:underline"
+                onClick={() => {
+                  gtag.event({
+                    action: "open_community",
+                    category: "external_links",
+                  });
+                }}
+              >
+                Join our community
+              </a>
             </div>
-            <div className="hover:underline">
-              <a href="#">Read our terms of service</a>
+            <div>
+              <Link href="/legal">
+                <a className="hover:underline">Read our terms of service</a>
+              </Link>
             </div>
-            <div className="hover:underline">
-              <a href="#">View source on GitHub</a>
+            <div>
+              <a
+                href="https://github.com/nubpro/applewatch-ewallet"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:underline"
+                onClick={() => {
+                  gtag.event({
+                    action: "open_github",
+                    category: "external_links",
+                  });
+                }}
+              >
+                View source on GitHub
+              </a>
             </div>
           </div>
         </div>
