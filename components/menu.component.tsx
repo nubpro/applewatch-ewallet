@@ -28,7 +28,7 @@ const Menu = () => {
         </Link>
 
         <a
-          href="https://www.facebook.com/groups/347421593618481"
+          href="https://www.facebook.com/groups/awwallet"
           target="_blank"
           rel="noreferrer"
           onClick={() => {

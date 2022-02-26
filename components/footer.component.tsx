@@ -40,7 +40,7 @@ const Footer = (props: any) => {
           <div className="mt-1 text-color-900 text-xs">
             <div>
               <a
-                href="https://www.facebook.com/groups/347421593618481"
+                href="https://www.facebook.com/groups/awwallet"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:underline"
