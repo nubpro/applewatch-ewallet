@@ -23,7 +23,7 @@ const Menu = () => {
         </div>
       </div>
       <div className="flex overflow-scroll items-center space-x-3 md:space-x-5 text-primary-900 font-semibold text-sm md:text-base">
-        <Link href="/#install">
+        <Link href="/#download">
           <a>Download</a>
         </Link>
 

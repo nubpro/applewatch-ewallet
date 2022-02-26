@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
-import Menu from "../components/menu";
-import Footer from "../components/footer";
+import Menu from "../components/menu.component";
+import Footer from "../components/footer.component";
 import viewShortcutPic from "../public/view-shortcut.png";
 import Image from "next/image";
 import getMaybankTokenPic from "../public/get-maybank-token.png";

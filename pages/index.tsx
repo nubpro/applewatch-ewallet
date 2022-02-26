@@ -6,8 +6,8 @@ import removeProxyman from "../public/remove-proxyman.png";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import * as gtag from "../lib/gtag";
-import Menu from "../components/menu";
-import Footer from "../components/footer";
+import Menu from "../components/menu.component";
+import Footer from "../components/footer.component";
 import teaserPic from "../public/teaser-ewallets.png";
 import Link from "next/link";
 import BasicLayout from "../layout/basic.layout";
@@ -92,14 +92,14 @@ const Home: NextPage = () => {
                 <br />
                 <div className="flex flex-col justify-center items-center">
                   <Image src={BoostImage} alt="Boost" width={158} height={50} />
-                  <div className="text-xs italic mt-1 text-center">
+                  <div className="text-xs italic mt-1 text-center leading-tight">
                     coming soon
                   </div>
                 </div>
 
                 <div className="flex flex-col justify-center items-center">
                   <Image src={MAEImage} alt="MAE" width={119} height={60} />
-                  <div className="text-xs italic mt-1 text-center">
+                  <div className="text-xs italic mt-1 text-center leading-tight">
                     coming soon
                   </div>
                 </div>
@@ -111,7 +111,7 @@ const Home: NextPage = () => {
                     width={261}
                     height={50}
                   />
-                  <div className="text-xs italic mt-1 text-center">
+                  <div className="text-xs italic mt-1 text-center leading-tight">
                     coming soon
                   </div>
                 </div>
@@ -120,9 +120,9 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="bg-gray-50 py-10 px-3">
+        <div className="bg-gray-50 py-10 px-3" id={"download"}>
           <div className="mt-2 mb-10 md:text-xl font-bold text-center text-secondary-400 [text-shadow:0_2px_0_#FFE419]">
-            We currently support the following eWallets
+            Choose our supported eWallets
           </div>
 
           <div className="space-y-14">

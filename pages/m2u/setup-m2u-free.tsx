@@ -184,11 +184,11 @@ const SetupM2UFree: NextPage = () => {
 
         <StepWrapper
           step={6}
-          title={"Add the shortcut. Replace it if it asked."}
+          title={"Add the shortcut. Replace it if you're asked."}
         />
         <StepWrapper
           step={7}
-          title={"🎉 You have completed the update process. Test it"}
+          title={"🎉 You have completed the update process. Give it a run!"}
         />
       </div>
     </BlogLayout>
