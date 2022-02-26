@@ -10,7 +10,7 @@ import Menu from "../components/menu";
 import Footer from "../components/footer";
 import teaserPic from "../public/teaser-ewallets.png";
 import Link from "next/link";
-import BasicLayout from "../layout/basic";
+import BasicLayout from "../layout/basic.layout";
 import GrabPayImage from "../public/ewallets/grabpay.png";
 import MAEImage from "../public/ewallets/mae.png";
 import BoostImage from "../public/ewallets/boost.png";
@@ -196,35 +196,34 @@ const Home: NextPage = () => {
             </div>
 
             <div className="flex flex-col w-10/12 m-auto space-y-3 justify-center drop-shadow-lg sm:flex-row sm:space-y-0 sm:items-center">
-              <a
-                href="#"
-                className="group h-80 sm:w-64 bg-white hover:bg-gray-100 rounded-2xl overflow-hidden flex flex-col"
-              >
-                <div className="text-center mt-8 mb-3">
-                  <div className="mb-1 flex justify-center">
-                    <Image
-                      src={M2UImage}
-                      alt="M2U"
-                      width={150}
-                      height={25}
-                      className="p-0"
-                    />
+              <Link href="/m2u/setup-m2u-free">
+                <a className="group h-80 sm:w-64 bg-white hover:bg-gray-100 rounded-2xl overflow-hidden flex flex-col">
+                  <div className="text-center mt-8 mb-3">
+                    <div className="mb-1 flex justify-center">
+                      <Image
+                        src={M2UImage}
+                        alt="M2U"
+                        width={150}
+                        height={25}
+                        className="p-0"
+                      />
+                    </div>
+                    <div className="text-xs uppercase font-extrabold tracking-wide">
+                      Free Version
+                    </div>
                   </div>
-                  <div className="text-xs uppercase font-extrabold tracking-wide">
-                    Free Version
+
+                  <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
+                    <div>Less merchant availability</div>
+                    <div>Show QR code only</div>
+                    <div>Phone-free</div>
                   </div>
-                </div>
 
-                <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
-                  <div>Less merchant availability</div>
-                  <div>Show QR code only</div>
-                  <div>Phone-free</div>
-                </div>
-
-                <div className="border-t text-center py-3.5 font-bold text-secondary-400 group-hover:bg-gray-100">
-                  Get started for FREE
-                </div>
-              </a>
+                  <div className="border-t text-center py-3.5 font-bold text-secondary-400 group-hover:bg-gray-100">
+                    Get started for FREE
+                  </div>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
