@@ -117,7 +117,7 @@ const SetupM2UFree: NextPage = () => {
 
           <StepWrapper
             step={3}
-            title="Turn off Proxyman or uninstall it before runnning the shortcut on
+            title="Turn off Proxyman or uninstall it before running the shortcut on
             your watch"
           >
             <span className="text-sm">
@@ -133,6 +133,29 @@ const SetupM2UFree: NextPage = () => {
                 className="rounded-xl mt-2"
               />
             </div>
+          </StepWrapper>
+
+          <StepWrapper
+            step={4}
+            title="🎉 Done! Run the shortcut on your watch."
+          >
+            <span className="text-sm">
+              🚨 Stuck? Need help? Seek for help in our{" "}
+              <a
+                href="https://www.facebook.com/groups/awwallet"
+                target="_blank"
+                rel="noreferrer"
+                className="underline decoration-secondary-400"
+                onClick={() => {
+                  gtag.event({
+                    action: "open_community",
+                    category: "external_links",
+                  });
+                }}
+              >
+                Facebook group
+              </a>
+            </span>
           </StepWrapper>
         </div>
 
