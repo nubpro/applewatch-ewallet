@@ -16,9 +16,9 @@ const StepWrapper = ({
           </span>
         )}
 
-        <div className="pl-3 leading-tight font-medium">{title}</div>
+        <div className="pl-3 leading-tight font-medium text-sm">{title}</div>
       </div>
-      {children && <div className="mt-4 pl-12">{children}</div>}
+      {children && <div className="mt-2 pl-12">{children}</div>}
     </div>
   );
 };

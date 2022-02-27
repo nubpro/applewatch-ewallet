@@ -26,12 +26,25 @@ const SetupM2UFree: NextPage = () => {
       <BlogLayout
         title={"Setup Maybank2U (M2U) eWallet on your Apple Watch for FREE!"}
         titleCoverStyle={"bg-gradient-to-tr from-[#EFCD11] to-[#C40DB6]"}
+        headingsMapping={[
+          {
+            heading: "Installation steps",
+            url: "#install",
+          },
+          {
+            heading: "Update existing shortcut",
+            url: "#update",
+          },
+        ]}
       >
-        <div className="py-4 md:text-xl text-secondary-400 font-semibold">
+        <div
+          className="md:text-md text-secondary-400 font-semibold"
+          id="install"
+        >
           Installation steps
         </div>
 
-        <div className="space-y-16">
+        <div className="mt-4 space-y-10">
           <StepWrapper
             step={1}
             title="Watch this video to learn how to setup it up"
@@ -159,14 +172,16 @@ const SetupM2UFree: NextPage = () => {
           </StepWrapper>
         </div>
 
+        <div className="h-[2px] bg-gray-200 my-10"></div>
+
         <div
-          className="mt-6 py-4 md:text-xl text-secondary-400 font-semibold"
+          className="md:text-md text-secondary-400 font-semibold"
           id={"update"}
         >
           Update existing shortcut
         </div>
 
-        <div className="space-y-10">
+        <div className="mt-6 space-y-10">
           <StepWrapper step={1} title="Open Shortcuts app on your iPhone" />
 
           <StepWrapper
