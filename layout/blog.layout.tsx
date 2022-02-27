@@ -25,11 +25,11 @@ const BlogLayout = ({
           {title}
         </div>
       </div>
-      <div className="container grid md:grid-cols-4 mx-auto py-4 md:py-8 mb-16">
-        <div className="md:col-span-3 pt-4">{children}</div>
+      <div className="container grid md:grid-cols-4 mx-auto px-4 md:px-8 mb-16">
+        <div className="md:col-span-3">{children}</div>
 
-        <div className="order-first md:order-last text-sm mb-10">
-          <div className="sticky top-0 pt-4">
+        <div className="order-first md:order-last text-sm">
+          <div className="sticky top-0 pt-10">
             <div className="font-semibold">On this page</div>
             <div className="mt-1 md:mt-3 space-y-0.5 flex flex-col">
               {headingsMapping.map((h) => (

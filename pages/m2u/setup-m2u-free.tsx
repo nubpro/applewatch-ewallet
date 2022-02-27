@@ -38,13 +38,13 @@ const SetupM2UFree: NextPage = () => {
         ]}
       >
         <div
-          className="md:text-md text-secondary-400 font-semibold"
+          className="md:text-md text-secondary-400 font-semibold pt-10"
           id="install"
         >
           Installation steps
         </div>
 
-        <div className="mt-4 space-y-10">
+        <div className="py-4 space-y-10">
           <StepWrapper
             step={1}
             title="Watch this video to learn how to setup it up"
@@ -172,10 +172,10 @@ const SetupM2UFree: NextPage = () => {
           </StepWrapper>
         </div>
 
-        <div className="h-[2px] bg-gray-200 my-10"></div>
+        <hr />
 
         <div
-          className="md:text-md text-secondary-400 font-semibold"
+          className="md:text-md pt-10 text-secondary-400 font-semibold"
           id={"update"}
         >
           Update existing shortcut
