@@ -84,6 +84,9 @@ const Home: NextPage = () => {
                     width={77}
                     height={65}
                   />
+                  <div className="text-xs mt-1 text-center leading-tight text-red-500">
+                    NEW
+                  </div>
                 </div>
 
                 <div className="flex flex-col justify-center items-center">
@@ -128,7 +131,7 @@ const Home: NextPage = () => {
           <div className="space-y-14">
             <div className="flex flex-col w-10/12 m-auto space-y-3 justify-center drop-shadow-lg sm:flex-row sm:space-y-0 sm:items-center">
               <a
-                href="#"
+                href="/grabpay/setup-grabpay-free"
                 className="group h-80 sm:w-64 bg-white hover:bg-gray-100 rounded-2xl overflow-hidden flex flex-col sm:rounded-none sm:rounded-l-2xl"
               >
                 <div className="text-center py-3">
@@ -146,8 +149,7 @@ const Home: NextPage = () => {
                 </div>
 
                 <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
-                  <div>High merchant availability</div>
-                  <div>Show QR code only</div>
+                  <div>QR code only</div>
                   <div>Collect GrabReward points</div>
                   <div>Phone-free</div>
                 </div>
@@ -176,21 +178,22 @@ const Home: NextPage = () => {
                 </div>
 
                 <div className="text-sm mb-auto space-y-1 px-6 text-white">
-                  <div>SUPER HIGH merchant availability</div>
-                  <div className="font-semibold">💸 Show wallet balance 💸</div>
-                  <div className="font-semibold">🎨🖌 Colour your QR code!</div>
-                  <div>
-                    Show QR code and{" "}
-                    <span className="font-semibold">✨ barcode ✨</span>
+                  <div className="font-semibold">High merchant support ✅</div>
+                  <div className="font-semibold">QR code and barcode ✅</div>
+                  <div className="font-semibold ">
+                    Show your wallet balance ✅
                   </div>
+                  <div className="font-semibold">Colour your QR code! ✅</div>
 
-                  <div>Collect GrabReward points</div>
-                  <div>Phone-free</div>
+                  <div className="text-secondary-100">
+                    Collect GrabReward points
+                  </div>
+                  <div className="text-secondary-100">Phone-free</div>
                 </div>
 
                 <div className="bg-secondary-500 border-t border-secondary-700 group-hover:bg-secondary-700 group-hover:border-secondary-900 text-center py-3.5 font-semibold text-primary-400 flex flex-row justify-between px-4">
                   <div>Try for free</div>
-                  <div>RM0.00/mon</div>
+                  <div>RM 9.90/yr</div>
                 </div>
               </a>
             </div>
@@ -214,8 +217,7 @@ const Home: NextPage = () => {
                   </div>
 
                   <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
-                    <div>Less merchant availability</div>
-                    <div>Show QR code only</div>
+                    <div>QR code only</div>
                     <div>Phone-free</div>
                   </div>
 

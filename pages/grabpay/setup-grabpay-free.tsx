@@ -7,7 +7,6 @@ import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import * as gtag from "../../lib/gtag";
 import removeProxyman from "../../public/remove-proxyman.png";
 import BlogLayout from "../../layout/blog.layout";
-import M2UImage from "../../public/ewallets/m2u.png";
 import React from "react";
 import StepWrapper from "../../components/stepWrapper.component";
 import viewShortcutPic from "../../public/view-shortcut.png";
@@ -16,16 +15,12 @@ import getMaybankTokenPic from "../../public/get-maybank-token.png";
 const SetupM2UFree: NextPage = () => {
   return (
     <BlogLayout
-      title={"Setup Maybank2U (M2U) eWallet on your Apple Watch for FREE!"}
-      titleCoverStyle={"bg-gradient-to-tr from-[#EFCD11] to-[#C40DB6]"}
+      title={"Setup GrabPay on your Apple Watch for FREE!"}
+      titleCoverStyle={"bg-gradient-to-r from-[#11EF80] to-[#2e70d4]"}
       headingsMapping={[
         {
           heading: "Installation steps",
           url: "#install",
-        },
-        {
-          heading: "Update existing shortcut",
-          url: "#update",
         },
       ]}
     >
@@ -39,7 +34,7 @@ const SetupM2UFree: NextPage = () => {
       <div className="py-4 space-y-10">
         <StepWrapper
           step={1}
-          title="Watch this video to learn how to setup up Maybank2U eWallet on your Apple Watch"
+          title="Watch this video to learn how to setup it up"
         >
           <div className="md:w-3/4">
             <LiteYouTubeEmbed
