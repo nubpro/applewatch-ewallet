@@ -31,5 +31,5 @@ jobs:
           message: |
            ⚠️ Scheduled test failed. Please fix! 🔧
 
-           Repository: ${GITHUB_REPOSITORY}
-           Branch: ${GITHUB_REF_NAME}
+           Repository: ${{GITHUB_REPOSITORY}}
+           Branch: ${{GITHUB_REF_NAME}}
