@@ -22,11 +22,12 @@ jobs:
       - name: Run tests
         run: yarn test
       - name: Notify failed scheduled test
+        if: failed()
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
            ⚠️ Scheduled test failed. Please fix! 🔧
-           
+
            Repository: ${{ github.repository }}
