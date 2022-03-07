@@ -56,7 +56,7 @@ describe("requestInit()", () => {
   });
 
   it("should fail due to using upcoming unreleased app version", async () => {
-    const appVersion = (parseFloat(CURRENT_APPVERSION) + 1).toString();
+    const appVersion = (parseFloat(CURRENT_APPVERSION) + 0.1).toFixed(1);
     expect.assertions(1);
     await expect(requestInit(appVersion)).rejects.toMatchObject({
       statusCode: 500,
