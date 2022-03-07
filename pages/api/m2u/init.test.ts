@@ -1,18 +1,36 @@
-import handler, { requestInit } from "./init";
+import handler, { requestInit, CURRENT_APPVERSION } from "./init";
 import { createMocks } from "node-mocks-http";
 
 describe("/api/m2u/init", () => {
-  it("should returns 200", async () => {
+  it("should returns status 200", async () => {
     const { req, res } = createMocks({
       method: "GET",
       query: {
-        v: "1.0",
+        v: "1.1",
       },
     });
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(200);
+  });
+
+  it("should returns error when client's shortcut version is outdated", async () => {
+    const { req, res } = createMocks({
+      method: "GET",
+      query: {
+        v: "0.1", // outdated version
+      },
+    });
+
+    await handler(req, res);
+
+    expect(res._getStatusCode()).toBe(403);
+    expect(JSON.parse(res._getData())).toEqual({
+      updateShortcut: true,
+      message:
+        "You're running an older awwallet which has outdated.\nTo continue using awwallet, please update to the latest version. Visit wwww.awwallet.vercel.app/update",
+    });
   });
 });
 
@@ -26,5 +44,23 @@ describe("requestInit()", () => {
     expect(response).toHaveProperty("appVersion");
     expect(response).toHaveProperty("platformVersion");
     expect(response).toHaveProperty("userAgent");
+  });
+
+  it("should fail due to invalid app version", async () => {
+    const appVersion = "100000";
+    expect.assertions(1);
+    await expect(requestInit(appVersion)).rejects.toMatchObject({
+      statusCode: 500,
+      message: "M2U init not returning 401",
+    });
+  });
+
+  it("should fail due to using upcoming unreleased app version", async () => {
+    const appVersion = (parseFloat(CURRENT_APPVERSION) + 1).toString();
+    expect.assertions(1);
+    await expect(requestInit(appVersion)).rejects.toMatchObject({
+      statusCode: 500,
+      message: "M2U init not returning 401",
+    });
   });
 });
