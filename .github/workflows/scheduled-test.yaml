@@ -1,4 +1,4 @@
-name: cron-test
+name: scheduled-test
 on:
   schedule:
     - cron: '0 1 * * *'
@@ -18,4 +18,7 @@ jobs:
       - name: Install modules
         run: yarn
       - name: Run tests
-        run: yarn test  
+        run: yarn test
+      - name: Notify failed scheduled tests
+        if: failure()
+        run: echo "Failed scheduled tests"
