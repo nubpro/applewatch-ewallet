@@ -1,6 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-async function requestInit() {
+class ErrorResponse extends Error {
+  statusCode: number;
+  body: { message: string };
+
+  constructor(message = "Internal server error", statusCode = 500) {
+    super(message);
+    const body = {
+      message: message + "\n\n(Please report this issue on awwallet group)",
+      updateShortcut: false,
+    };
+
+    this.body = body;
+    this.statusCode = statusCode;
+  }
+}
+
+export async function requestInit() {
   // Header params
   const appVersion = "8.7";
   const platformVersion = "6.0.0";
@@ -23,6 +39,15 @@ async function requestInit() {
     method: "POST",
     headers,
   });
+
+  if (res.status === 403) {
+    // Forbidden
+    throw new ErrorResponse("Service is unavailable", 503);
+  } else if (res.status !== 401) {
+    // 401 is all good and that is the expected response
+    // dont even bother with 200, 200's body is empty
+    throw new ErrorResponse("M2U init not returning 401");
+  }
 
   const raw = await res.text();
   const cleaned = raw.replace("/*-secure-", "").replace("*/", "");
@@ -48,7 +73,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const clientVersion = Number(req.query.v) || 1.0;
-  const minSupportedVersion = 1.1; // this version and above is supporte
+  const minSupportedVersion = 1.1; // this version and above is supported
   const updateShortcut = minSupportedVersion > clientVersion;
 
   if (updateShortcut === true) {
@@ -59,6 +84,16 @@ export default async function handler(
     });
   }
 
-  const init_result = await requestInit();
-  return res.status(200).json(init_result);
+  try {
+    const init_result = await requestInit();
+    return res.status(200).json(init_result);
+  } catch (error) {
+    console.error(error);
+    if (error instanceof ErrorResponse) {
+      return res.status(error.statusCode).json(error.body);
+    }
+
+    // default error
+    return res.status(500).json(new ErrorResponse().body);
+  }
 }
