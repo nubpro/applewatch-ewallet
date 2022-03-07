@@ -1,4 +1,3 @@
-import { rmSync } from "fs";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 class ErrorResponse extends Error {
@@ -17,7 +16,7 @@ class ErrorResponse extends Error {
   }
 }
 
-async function requestInit() {
+export async function requestInit() {
   // Header params
   const appVersion = "8.6";
   const platformVersion = "6.0.0";
@@ -87,8 +86,6 @@ export default async function handler(
 
   try {
     const init_result = await requestInit();
-    console.log(init_result);
-
     return res.status(200).json(init_result);
   } catch (error) {
     console.error(error);
