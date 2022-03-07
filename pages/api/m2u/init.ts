@@ -16,9 +16,10 @@ class ErrorResponse extends Error {
   }
 }
 
-export async function requestInit() {
+export const CURRENT_APPVERSION: string = "8.7";
+
+export async function requestInit(appVersion = CURRENT_APPVERSION) {
   // Header params
-  const appVersion = "8.7";
   const platformVersion = "6.0.0";
   const userAgent = "M2U%20MY/1.0 CFNetwork/1312 Darwin/21.0.0";
 
