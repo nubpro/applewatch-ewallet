@@ -7,6 +7,7 @@ on:
       
 jobs:
   test:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -31,3 +32,4 @@ jobs:
            ⚠️ Scheduled test failed. Please fix! 🔧
 
            Repository: ${{ github.repository }}
+           Branch: ${GITHUB_REF##*/}
