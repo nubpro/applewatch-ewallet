@@ -6,7 +6,7 @@ describe("/api/m2u/init", () => {
     const { req, res } = createMocks({
       method: "GET",
       query: {
-        v: "1.1",
+        v: "1.0",
       },
     });
 
