@@ -130,72 +130,72 @@ const Home: NextPage = () => {
 
           <div className="space-y-14">
             <div className="flex flex-col w-10/12 m-auto space-y-3 justify-center drop-shadow-lg sm:flex-row sm:space-y-0 sm:items-center">
-              <a
-                href="/grabpay/setup-grabpay-free"
-                className="group h-80 sm:w-64 bg-white hover:bg-gray-100 rounded-2xl overflow-hidden flex flex-col sm:rounded-none sm:rounded-l-2xl"
-              >
-                <div className="text-center py-3">
-                  <div className="relative h-14 mt-2 mb-1">
-                    <Image
-                      src={GrabPayImage}
-                      layout={"fill"}
-                      alt="GrabPay"
-                      className="object-contain"
-                    />
+              <Link href="/grabpay/setup-grabpay-free">
+                <a className="group h-80 sm:w-64 bg-white hover:bg-gray-100 rounded-2xl overflow-hidden flex flex-col sm:rounded-none sm:rounded-l-2xl">
+                  <div className="text-center py-3">
+                    <div className="relative h-14 mt-2 mb-1">
+                      <Image
+                        src={GrabPayImage}
+                        layout={"fill"}
+                        alt="GrabPay"
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="text-xs uppercase font-extrabold tracking-wide">
+                      Free Version
+                    </div>
                   </div>
-                  <div className="text-xs uppercase font-extrabold tracking-wide">
-                    Free Version
+
+                  <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
+                    <div>QR code only</div>
+                    <div>Collect GrabReward points</div>
+                    <div>Phone-free</div>
                   </div>
-                </div>
 
-                <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
-                  <div>QR code only</div>
-                  <div>Collect GrabReward points</div>
-                  <div>Phone-free</div>
-                </div>
-
-                <div className="border-t text-center py-3.5 font-bold text-secondary-400 group-hover:bg-gray-100">
-                  Get started for FREE
-                </div>
-              </a>
-
-              <a
-                href="#"
-                className="group h-[23em] sm:w-72 bg-secondary-500 hover:bg-secondary-700 rounded-2xl flex flex-col drop-shadow-md overflow-hidden"
-              >
-                <div className="text-center py-3">
-                  <div className="relative h-14 mt-2 mb-1">
-                    <Image
-                      src={GrabPayImage}
-                      layout={"fill"}
-                      alt="GrabPay"
-                      className="object-contain"
-                    />
+                  <div className="border-t text-center py-3.5 font-bold text-secondary-400 group-hover:bg-gray-100">
+                    Get started for FREE
                   </div>
-                  <div className="text-xs uppercase font-extrabold tracking-wide text-primary-400">
-                    Pro Version
-                  </div>
-                </div>
+                </a>
+              </Link>
 
-                <div className="text-sm mb-auto space-y-1 px-6 text-white">
-                  <div className="font-semibold">High merchant support ✅</div>
-                  <div className="font-semibold">QR code and barcode ✅</div>
-                  <div className="font-semibold ">
-                    Show your wallet balance ✅
+              <Link href="#">
+                <a className="group h-[23em] sm:w-72 bg-secondary-500 hover:bg-secondary-700 rounded-2xl flex flex-col drop-shadow-md overflow-hidden">
+                  <div className="text-center py-3">
+                    <div className="relative h-14 mt-2 mb-1">
+                      <Image
+                        src={GrabPayImage}
+                        layout={"fill"}
+                        alt="GrabPay"
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="text-xs uppercase font-extrabold tracking-wide text-primary-400">
+                      Pro Version
+                    </div>
                   </div>
-                  <div className="font-semibold">Colour your QR code! ✅</div>
 
-                  <div className="text-secondary-100">
-                    Collect GrabReward points
+                  <div className="text-sm mb-auto space-y-1 px-6 text-white">
+                    <div className="font-semibold">
+                      High merchant support ✅
+                    </div>
+                    <div className="font-semibold">QR code and barcode ✅</div>
+                    <div className="font-semibold ">
+                      Show your wallet balance ✅
+                    </div>
+                    <div className="font-semibold">Colour your QR code! ✅</div>
+
+                    <div className="text-secondary-100">
+                      Collect GrabReward points
+                    </div>
+                    <div className="text-secondary-100">Phone-free</div>
                   </div>
-                  <div className="text-secondary-100">Phone-free</div>
-                </div>
 
-                <div className="bg-secondary-500 border-t border-secondary-700 group-hover:bg-secondary-700 group-hover:border-secondary-900 text-center py-3.5 font-semibold text-primary-400 flex flex-row justify-between px-4">
-                  <div>Try for free</div>
-                  <div>RM 9.90/yr</div>
-                </div>
-              </a>
+                  <div className="bg-secondary-500 border-t border-secondary-700 group-hover:bg-secondary-700 group-hover:border-secondary-900 text-center py-3.5 font-semibold text-primary-400 flex flex-row justify-between px-4">
+                    <div>Try for free</div>
+                    <div>RM 9.90/yr</div>
+                  </div>
+                </a>
+              </Link>
             </div>
 
             <div className="flex flex-col w-10/12 m-auto space-y-3 justify-center drop-shadow-lg sm:flex-row sm:space-y-0 sm:items-center">
@@ -219,6 +219,7 @@ const Home: NextPage = () => {
                   <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
                     <div>QR code only</div>
                     <div>Phone-free</div>
+                    <div>{"Lower uptime due to Maybank's maintenance 🟡"}</div>
                   </div>
 
                   <div className="border-t text-center py-3.5 font-bold text-secondary-400 group-hover:bg-gray-100">
