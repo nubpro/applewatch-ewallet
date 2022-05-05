@@ -13,7 +13,7 @@ import StepWrapper from "../../components/stepWrapper.component";
 const SetupGrabPay: NextPage = () => {
   return (
     <BlogLayout
-      title={"Setup GrabPay on your Apple Watch (Free Trial Included)"}
+      title={"Setup GrabPay on your Apple Watch (Free 30 Days Trial)"}
       titleCoverStyle={"bg-gradient-to-r from-[#11EF80] to-[#2e70d4]"}
       headingsMapping={[
         {
