@@ -41,7 +41,7 @@ const SetupGrabPay: NextPage = () => {
               poster="maxresdefault"
               onIframeAdded={() =>
                 gtag.event({
-                  action: "play_tutorial",
+                  action: "play_tutorial_grabpay",
                   category: "video",
                 })
               }
@@ -98,7 +98,7 @@ const SetupGrabPay: NextPage = () => {
                   fillRule="evenodd"
                 />
               </svg>
-              Download the Shortcut
+              {'Download "Pay with Grab" Shortcut'}
             </div>
           </a>
         </StepWrapper>

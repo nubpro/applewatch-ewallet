@@ -46,7 +46,7 @@ const SetupM2UFree: NextPage = () => {
               poster="maxresdefault"
               onIframeAdded={() =>
                 gtag.event({
-                  action: "play_tutorial",
+                  action: "play_tutorial_m2u",
                   category: "video",
                 })
               }
@@ -103,7 +103,7 @@ const SetupM2UFree: NextPage = () => {
                   fillRule="evenodd"
                 />
               </svg>
-              Download the Shortcut
+              {'Download "Pay with Maybank" Shortcut'}
             </div>
           </a>
 
