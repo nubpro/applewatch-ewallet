@@ -20,8 +20,9 @@ const Home: NextPage = () => {
         </div>
         <ul className="list-disc px-5 space-y-3 font-medium">
           <li>
-            &quot;awwallet&quot; is not affiliated with Maybank, Maybank2u
-            and/or any entities under Malayan Banking Berhad.
+            &quot;awwallet&quot; is not affiliated with Malayan Banking Berhad,
+            Grab Holdings Inc. Boost, Shopee and/or any entities under these
+            companies.
           </li>
           <li>
             We (&quot;awwallet&quot;) will not assume any legal responsibility
