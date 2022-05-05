@@ -129,7 +129,7 @@ const SetupM2UFree: NextPage = () => {
               src={offProxymanPic}
               alt="Turn off Proxyman"
               width={300}
-              height={223}
+              height={262}
               className="rounded-xl mt-2"
             />
           </div>
