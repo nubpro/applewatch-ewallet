@@ -72,7 +72,7 @@ const Footer = (props: any) => {
                   });
                 }}
               >
-                View source on GitHub
+                GitHub
               </a>
             </div>
           </div>
