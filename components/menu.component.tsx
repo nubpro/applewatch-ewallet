@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logoPic from "../public/logo.png";
 import * as gtag from "../lib/gtag";
-import BasicLayout from "../layout/basic";
+import BasicLayout from "../layout/basic.layout";
 
 const Menu = () => {
   return (

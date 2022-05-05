@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       <BasicLayout>
         <div className="flex flex-col md:flex-row md:h-[500px]">
           <div className="relative bg-slate-400 overflow-hidden h-[500px] md:w-96">
-            {/* Sample placeholde image */}
+            {/* Sample placeholder image */}
             {/* <Image
               src={removeProxyman}
               alt="TBA"
