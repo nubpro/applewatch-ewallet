@@ -84,8 +84,8 @@ const Footer = (props: any) => {
       </div>
       <div className="mt-6 md:mt-10">
         <div className="text-xs text-color-900">
-          awwallet is not affiliated with Maybank, Malayan Banking Berhad, Grab,
-          Boost, and/or any entities under these companies.
+          awwallet is not affiliated with Malayan Banking Berhad, Grab Holdings
+          Inc. Boost, Shopee and/or any entities under these companies.
         </div>
       </div>
     </div>

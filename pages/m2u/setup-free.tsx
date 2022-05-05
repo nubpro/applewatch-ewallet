@@ -1,11 +1,10 @@
 import type { NextPage } from "next";
-import BasicLayout from "../../layout/basic.layout";
 import Image from "next/image";
 import Link from "next/link";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import * as gtag from "../../lib/gtag";
-import removeProxyman from "../../public/remove-proxyman.png";
+import offProxymanPic from "../../public/off-proxyman.jpg";
 import BlogLayout from "../../layout/blog.layout";
 import React from "react";
 import StepWrapper from "../../components/stepWrapper.component";
@@ -15,12 +14,16 @@ import getMaybankTokenPic from "../../public/get-maybank-token.png";
 const SetupM2UFree: NextPage = () => {
   return (
     <BlogLayout
-      title={"Setup GrabPay on your Apple Watch for FREE!"}
-      titleCoverStyle={"bg-gradient-to-r from-[#11EF80] to-[#2e70d4]"}
+      title={"Setup Maybank2U (M2U) eWallet on your Apple Watch for FREE!"}
+      titleCoverStyle={"bg-gradient-to-tr from-[#EFCD11] to-[#C40DB6]"}
       headingsMapping={[
         {
           heading: "Installation steps",
           url: "#install",
+        },
+        {
+          heading: "Update existing shortcut",
+          url: "#update",
         },
       ]}
     >
@@ -34,7 +37,7 @@ const SetupM2UFree: NextPage = () => {
       <div className="py-4 space-y-10">
         <StepWrapper
           step={1}
-          title="Watch this video to learn how to setup it up"
+          title="Watch this video to learn how to setup up Maybank2U eWallet on your Apple Watch"
         >
           <div className="md:w-3/4">
             <LiteYouTubeEmbed
@@ -56,7 +59,7 @@ const SetupM2UFree: NextPage = () => {
           title={'Install "Pay with Maybank" shortcut on your iPhone'}
         >
           <a
-            href="https://www.facebook.com/groups/347421593618481"
+            href="https://bit.ly/3tx45B5"
             target="_blank"
             rel="noreferrer"
             className="bg-secondary-400 mt-3 py-4 px-8 font-extrabold text-white rounded-2xl inline-block"
@@ -64,7 +67,6 @@ const SetupM2UFree: NextPage = () => {
               gtag.event({
                 action: "download_maybank_shortcut",
                 category: "download",
-                label: "redirect to fb",
               });
             }}
           >
@@ -101,7 +103,7 @@ const SetupM2UFree: NextPage = () => {
                   fillRule="evenodd"
                 />
               </svg>
-              Get the download link from our Facebook Group
+              Download the Shortcut
             </div>
           </a>
 
@@ -115,8 +117,8 @@ const SetupM2UFree: NextPage = () => {
 
         <StepWrapper
           step={3}
-          title="Turn off Proxyman or uninstall it before running the shortcut on
-            your watch"
+          title="Turn off Proxyman before running the shortcut on
+            your watch. (Proxyman > More > Turn off Capture Traffic)"
         >
           <span className="text-sm">
             {"🚨 Do it or you will get an invalid certification error"}
@@ -124,8 +126,8 @@ const SetupM2UFree: NextPage = () => {
 
           <div className="mt-3">
             <Image
-              src={removeProxyman}
-              alt="Uninstall Proxyman app from your iPhone"
+              src={offProxymanPic}
+              alt="Turn off Proxyman"
               width={300}
               height={223}
               className="rounded-xl mt-2"
@@ -135,7 +137,7 @@ const SetupM2UFree: NextPage = () => {
 
         <StepWrapper step={4} title="🎉 Done! Run the shortcut on your watch.">
           <span className="text-sm">
-            🚨 Stuck? Need help? Seek for help in our{" "}
+            🚨 Stuck? Need help? Ask for help in{" "}
             <a
               href="https://www.facebook.com/groups/awwallet"
               target="_blank"
@@ -148,7 +150,7 @@ const SetupM2UFree: NextPage = () => {
                 });
               }}
             >
-              Facebook group
+              awwallet FB Group
             </a>
           </span>
         </StepWrapper>
