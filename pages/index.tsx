@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>awwallet | Malaysia First e-Wallet on the Apple Watch</title>
+        <title>awwallet | Get Malaysia eWallets on your Apple Watch</title>
         <meta
           name="google-site-verification"
           content="1AZpUVyibVdjocfPK11efOFJXH-pqKXsr-D0DSGVqcc"
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
           <div className="flex-1 px-5 py-10 md:px-10 md:py-12">
             <div className="md:text-2xl">
               <div className="font-bold">
-                awwallet makes it possible to Pay with just your Apple Watch
+                Make payment with just your Apple Watch
               </div>
               <div className="font-extrabold">
                 Cash-free. Phone-free. For free.
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className="mt-10">
-              <div>Access your favourite eWallets on your Apple Watch</div>
+              <div>Access your favourite eWallets on your watch</div>
               <div className="space-x-4 mt-6 flex md:space-x-6">
                 <div className="flex flex-col justify-center items-center">
                   <Image
