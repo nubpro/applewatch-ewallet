@@ -134,11 +134,11 @@ const Home: NextPage = () => {
               <>
                 Forget the Phone.
                 <br />
-                Raise &amp; Pay
+                Just Raise &amp; Pay
               </>
             }
             description={
-              "Making payments from your watch is easier than fumbling for your phone, entering the pin, finding the right app, finding the pay icon and so on."
+              "Making payments from your watch is easier than taking your phone out from the pocket, entering the pin, swiping through the home pages to find the right app, searching for the pay icon and so on."
             }
           />
 
