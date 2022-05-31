@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>awwallet | Legal</title>
+        <title>awwallet | Terms of Service</title>
       </Head>
       <div className="bg-white w-full h-full z-10 fixed flex flex-col items-center pt-10 px-5">
         <div
