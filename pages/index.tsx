@@ -138,7 +138,7 @@ const Home: NextPage = () => {
               </>
             }
             description={
-              "Making payments from your watch is easier than taking your phone out from the pocket, entering the pin, swiping through the home pages to find the right app, searching for the pay icon and so on."
+              "Making payments from your watch is easier than taking your phone out from the pocket, unlocking the phone, swiping through the home pages to find the right app, searching for the pay icon and so on."
             }
           />
 
@@ -160,7 +160,7 @@ const Home: NextPage = () => {
                 <span className="font-semibold">Friend:</span> Bro show me your
                 QR code, I’ll transfer to you.
                 <br />
-                <span className="font-semibold">You:</span> *lifts wrist*{" "}
+                <span className="font-semibold">You:</span> *lift wrist*{" "}
               </>
             }
           />
