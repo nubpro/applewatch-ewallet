@@ -55,8 +55,8 @@ const Footer = (props: any) => {
               </a>
             </div>
             <div>
-              <Link href="/legal">
-                <a className="hover:underline">Read our terms of service</a>
+              <Link href="/tos">
+                <a className="hover:underline">Terms of Service</a>
               </Link>
             </div>
             <div>

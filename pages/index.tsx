@@ -76,21 +76,25 @@ const Home: NextPage = () => {
             <div className="mt-10">
               <div>Access your favourite eWallets on your watch</div>
               <div className="space-x-4 mt-6 flex md:space-x-6">
-                <div className="flex flex-col justify-center items-center">
-                  <Image
-                    src={GrabPayImage}
-                    alt="GrabPay"
-                    width={77}
-                    height={65}
-                  />
-                  <div className="text-xs mt-1 text-center leading-tight text-red-500 font-bold">
-                    NEW
-                  </div>
-                </div>
+                <Link href="/grabpay/setup">
+                  <a className="flex flex-col justify-center items-center">
+                    <Image
+                      src={GrabPayImage}
+                      alt="GrabPay"
+                      width={77}
+                      height={65}
+                    />
+                    <div className="text-xs mt-1 text-center leading-tight text-red-500 font-bold">
+                      NEW
+                    </div>
+                  </a>
+                </Link>
 
-                <div className="flex flex-col justify-center items-center">
-                  <Image src={M2UImage} alt="M2U" width={200} height={33} />
-                </div>
+                <Link href="/m2u/setup-free">
+                  <a className="flex flex-col justify-center items-center">
+                    <Image src={M2UImage} alt="M2U" width={200} height={33} />
+                  </a>
+                </Link>
                 <br />
                 <div className="flex flex-col justify-center items-center">
                   <Image src={BoostImage} alt="Boost" width={158} height={50} />

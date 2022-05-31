@@ -13,12 +13,12 @@ const Home: NextPage = () => {
           className="font-extrabold text-xl py-4 md:text-2xl text-center text-secondary-400"
           id="howto"
         >
-          Terms and Conditions of awwallet
+          Terms of Service
         </div>
         <ul className="list-disc px-5 space-y-3 font-medium">
           <div>
             By agreeing, accessing or utilizing awwallet or any page or part
-            thereof, you agree to be bounded to these Terms and Conditions. If
+            thereof, you agree to be bounded to these terms and conditions. If
             you choose NOT to accept these terms and conditions or any of its
             revisions, please do not proceed and immediately discontinue your
             access and/or use of awwallet.
