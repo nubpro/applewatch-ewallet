@@ -66,7 +66,7 @@ const Home: NextPage = () => {
 
           <div className="flex-1 px-8 py-14 md:px-10 md:py-12">
             <div className="text-xl md:text-2xl">
-              <div className="font-bold">Pay just your Apple Watch</div>
+              <div className="font-bold">Pay with just your Apple Watch</div>
               <div className="font-extrabold">
                 Cash-free. Phone-free. For free.
               </div>
