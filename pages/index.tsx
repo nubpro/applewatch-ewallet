@@ -207,9 +207,9 @@ const Home: NextPage = () => {
                     <div>Pay with QR code and barcode ✅</div>
                     <div>Receive payment ✅</div>
                     <div>Glance at your wallet balance ✅</div>
-                    <div>Check your activity ✅</div>
-                    <div>Customize your QR code ✅</div>
-                    <div>Forget the phone</div>
+                    <div>See wallet activity ✅</div>
+                    {/* <div>Customize your QR code ✅</div> */}
+                    <div>Works without iPhone tethered</div>
                   </div>
 
                   <div className="bg-secondary-500 border-t border-secondary-700 group-hover:bg-secondary-700 group-hover:border-secondary-900 text-center py-3.5 font-semibold text-primary-400 flex flex-row justify-between px-4">
@@ -241,7 +241,7 @@ const Home: NextPage = () => {
                   <div className="text-sm mb-auto space-y-1 px-6 text-primary-900">
                     <div>Pay with QR code only</div>
                     <div>{"Lower uptime due to Maybank's maintenance"}</div>
-                    <div>Forget the phone</div>
+                    <div>Works without iPhone tethered</div>
                   </div>
 
                   <div className="border-t text-center py-3.5 font-bold text-secondary-400 group-hover:bg-gray-100">
