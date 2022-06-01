@@ -160,7 +160,9 @@ const Home: NextPage = () => {
                 <span className="font-semibold">Friend:</span> Bro show me your
                 QR code, I’ll transfer to you.
                 <br />
-                <span className="font-semibold">You:</span> *lift wrist*{" "}
+                <span className="font-semibold">You:</span> *lift wrist*
+                <br />
+                <span className="font-semibold">Friend:</span> 😮
               </>
             }
           />
