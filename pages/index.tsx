@@ -138,7 +138,7 @@ const Home: NextPage = () => {
               </>
             }
             description={
-              "Making payments from your watch is easier than taking your phone out from the pocket, unlocking the phone, swiping through the home pages to find the right app, searching for the pay icon and so on."
+              "Making payments from your watch is easier than taking your phone out from the pocket, unlocking the phone, swiping through the home pages to find the right app, then searching for the... You get the picture"
             }
           />
 
