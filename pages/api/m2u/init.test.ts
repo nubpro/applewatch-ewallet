@@ -55,10 +55,10 @@ describe("requestInit()", () => {
     });
   });
 
-  it("should fail due to using upcoming unreleased app version", async () => {
-    const appVersion = (parseFloat(CURRENT_APPVERSION) + 0.1).toFixed(1);
+  const upcomingAppVersion = (parseFloat(CURRENT_APPVERSION) + 0.1).toFixed(1);
+  it(`should fail due to using upcoming unreleased app version (${upcomingAppVersion})`, async () => {
     expect.assertions(1);
-    await expect(requestInit(appVersion)).rejects.toMatchObject({
+    await expect(requestInit(upcomingAppVersion)).rejects.toMatchObject({
       statusCode: 500,
       message: "M2U init not returning 401",
     });
