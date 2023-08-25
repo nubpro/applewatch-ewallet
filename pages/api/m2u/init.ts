@@ -16,7 +16,7 @@ class ErrorResponse extends Error {
   }
 }
 
-export const CURRENT_APPVERSION: string = "9.8";
+export const CURRENT_APPVERSION: string = "9.9";
 
 export async function requestInit(appVersion = CURRENT_APPVERSION) {
   // Header params
