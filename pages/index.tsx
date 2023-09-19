@@ -75,13 +75,13 @@ const Home: NextPage = () => {
 
               <div className="p-6 space-y-6">
                 <p className="text-base leading-relaxed text-gray-500">
-                  After more than a year of service, awwallet is shutting down
+                  {`After more than a year of service, awwallet is shutting down
                   for good. It's unfortunate that we have to end up this way,
                   but on a bright side it has never being easier to pay using
                   your Apple Watch. The introduction of Apple Pay on August 8th
                   2022 marks an important milestone to Malaysia and to the Apple
                   community. And with that, awwallet has been replaced by a far
-                  superior and first-party supported payment method.
+                  superior and first-party supported payment method.`}
                 </p>
                 <p className="text-base leading-relaxed text-gray-500">
                   Thank you for sharing the same niche as we all did.
