@@ -54,7 +54,7 @@ const SetupGrabPay: NextPage = () => {
           title={'Download and install "Pay with Grab" shortcut on your iPhone'}
         >
           <a
-            href="https://bit.ly/3MRUCuD"
+            href="#"
             target="_blank"
             rel="noreferrer"
             className="bg-secondary-400 mt-3 py-4 px-8 font-extrabold text-white rounded-2xl inline-block"

@@ -79,7 +79,7 @@ const Footer = (props: any) => {
         </div>
 
         <div className="font-bold order-first md:order-last text-primary-900 pb-2">
-          &copy; awwallet 2022
+          &copy; awwallet 2022 - 2023
         </div>
       </div>
       <div className="mt-6 md:mt-10">

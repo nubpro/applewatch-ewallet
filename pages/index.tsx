@@ -50,6 +50,9 @@ const Home: NextPage = () => {
                   type="button"
                   className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                   data-modal-hide="defaultModal"
+                  onClick={() => {
+                    setShowModal(false);
+                  }}
                 >
                   <svg
                     className="w-3 h-3"
@@ -290,9 +293,8 @@ const Home: NextPage = () => {
                     <div>Works without iPhone tethered</div>
                   </div>
 
-                  <div className="bg-secondary-500 border-t border-secondary-700 group-hover:bg-secondary-700 group-hover:border-secondary-900 text-center py-3.5 font-semibold text-primary-400 flex flex-row justify-between px-4">
-                    <div>Try for free</div>
-                    <div>RM 11.90/yr</div>
+                  <div className="bg-secondary-500 border-t border-secondary-700 group-hover:bg-secondary-700 group-hover:border-secondary-900 py-3.5 font-semibold text-primary-400 text-center justify-between px-4">
+                    Not Available
                   </div>
                 </a>
               </Link>
@@ -323,7 +325,7 @@ const Home: NextPage = () => {
                   </div>
 
                   <div className="border-t text-center py-3.5 font-bold text-secondary-400 group-hover:bg-gray-100">
-                    Get started for FREE
+                    Not Available
                   </div>
                 </a>
               </Link>
