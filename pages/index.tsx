@@ -19,8 +19,11 @@ import PayCashierMockupImage from "../public/mockups/pay_cashier.png";
 import ReceiveMoneyMockupImage from "../public/mockups/receive_money.png";
 import ViewActivityMockupImage from "../public/mockups/view_activity.png";
 import BigTile from "../components/bigTile.component";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  const [showModal, setShowModal] = useState(true);
+
   return (
     <>
       <Head>
@@ -30,6 +33,76 @@ const Home: NextPage = () => {
           content="1AZpUVyibVdjocfPK11efOFJXH-pqKXsr-D0DSGVqcc"
         />
       </Head>
+
+      {showModal && (
+        <div
+          id="defaultModal"
+          aria-hidden="true"
+          className="flex items-center fixed top-0 left-0 right-0 z-50 w-full p-4 max-h-full h-screen bg-black bg-opacity-70"
+        >
+          <div className="relative w-full max-w-2xl max-h-full mx-auto">
+            <div className="relative bg-white rounded-lg shadow-lg">
+              <div className="flex items-start justify-between p-4 border-b rounded-t">
+                <h3 className="text-xl font-semibold text-gray-900">
+                  awwallet is bidding goodbye 👋
+                </h3>
+                <button
+                  type="button"
+                  className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="defaultModal"
+                >
+                  <svg
+                    className="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                    />
+                  </svg>
+                  <span className="sr-only">Close modal</span>
+                </button>
+              </div>
+
+              <div className="p-6 space-y-6">
+                <p className="text-base leading-relaxed text-gray-500">
+                  After more than a year of service, awwallet is shutting down
+                  for good. It's unfortunate that we have to end up this way,
+                  but on a bright side it has never being easier to pay using
+                  your Apple Watch. The introduction of Apple Pay on August 8th
+                  2022 marks an important milestone to Malaysia and to the Apple
+                  community. And with that, awwallet has been replaced by a far
+                  superior and first-party supported payment method.
+                </p>
+                <p className="text-base leading-relaxed text-gray-500">
+                  Thank you for sharing the same niche as we all did.
+                  <br />
+                  CWK
+                </p>
+              </div>
+
+              <div className="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b">
+                <button
+                  data-modal-hide="defaultModal"
+                  type="button"
+                  onClick={() => {
+                    setShowModal(false);
+                  }}
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                >
+                  👋
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <BasicLayout>
         <div className="flex flex-col md:flex-row md:h-[500px]">
@@ -84,8 +157,8 @@ const Home: NextPage = () => {
                       width={77}
                       height={65}
                     />
-                    <div className="text-xs mt-1 text-center leading-tight text-red-500 font-bold">
-                      NEW
+                    <div className="text-xs italic mt-1 text-center leading-tight">
+                      not available
                     </div>
                   </a>
                 </Link>
@@ -93,20 +166,23 @@ const Home: NextPage = () => {
                 <Link href="/m2u/setup-free">
                   <a className="flex flex-col justify-center items-center">
                     <Image src={M2UImage} alt="M2U" width={200} height={33} />
+                    <div className="text-xs italic mt-1 text-center leading-tight">
+                      not available
+                    </div>
                   </a>
                 </Link>
                 <br />
                 <div className="flex flex-col justify-center items-center">
                   <Image src={BoostImage} alt="Boost" width={158} height={50} />
                   <div className="text-xs italic mt-1 text-center leading-tight">
-                    coming soon
+                    not available
                   </div>
                 </div>
 
                 <div className="flex flex-col justify-center items-center">
                   <Image src={MAEImage} alt="MAE" width={119} height={60} />
                   <div className="text-xs italic mt-1 text-center leading-tight">
-                    coming soon
+                    not available
                   </div>
                 </div>
 
@@ -118,7 +194,7 @@ const Home: NextPage = () => {
                     height={50}
                   />
                   <div className="text-xs italic mt-1 text-center leading-tight">
-                    coming soon
+                    not available
                   </div>
                 </div>
               </div>
